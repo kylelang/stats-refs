@@ -1,0 +1,695 @@
+
+%%%%% String Definitions %%%%%%
+
+%@string{inPress = "In Press"}
+
+%%%%% Articles %%%%%
+
+@article{belinEtAl:1999,
+title={Performance of a General Location Model with an Ignorable Misssing-Data Assumption in a Multivariate Mental Health Services Study},
+author={Belin, Thomas R. and Hu, Ming-Yi and Young, Alexander S. and Grusky, Oscar},
+journal={Statistics in Medicine},
+volume={18},
+pages={3123--3135},
+year={1999}
+}
+
+@article{bernaardsEtAl:2007,
+title={Robustness of a multivariate normal approximation for imputation of incomplete binary data},
+author={Bernaards, Coen A. and Belin, Thomas R. and Schafer, Joseph L.},
+journal={Statistics in Medicine},
+volume={26},
+pages={1368--1382},
+year={2007},
+publisher={Wiley InterScience},
+doi={10.1002/sim.2619}
+}
+
+@article{bodner:2006,
+  title={MISSING DATA: PREVALENCE AND REPORTING PRACTICES 1},
+  author={Bodner, T. E.},
+  journal={Psychological reports},
+  volume={99},
+  number={3},
+  pages={675--680},
+  year={2006},
+  publisher={Ammons Scientific, Ltd. PO Box 9229, Missoula, MT 59807-9229 USA},
+  doi={10.2466/PR0.99.3.675-680}
+}
+
+@article{burtonEtAl:2006,
+author={Burton, A. and Altman, D. G. and Royston, P. and Holder, R. L.},
+title={The design of simulation studies in medical statistics},
+journal={Statistics in Medicine},
+volume={25},
+number={24},
+publisher={John Wiley & Sons, Ltd.},
+issn={1097-0258},
+doi={10.1002/sim.2673},
+pages={4279--4292},
+year={2006}
+}
+
+@article{brown:1984,
+  title={Asymptotically distribution-free methods for the analysis of covariance structures.},
+  author={Browne, M. W.},
+  journal={British Journal of Mathematical and Statistical Psychology},
+  year={1984},
+  volume = {37},
+  publisher={British Psychological Society},
+  doi={10.1111/j.2044-8317.1984.tb00789.x}
+}
+
+@article{caiLee:2009,
+  title={Covariance Structure Model Fit Testing under Missing Data: An Application of the Supplemented EM Algorithm.},
+  author={Cai, L. and Lee, T.},
+  journal={Multivariate Behavioral Research},
+  volume={44},
+  number={2},
+  pages={281--304},
+  year={2009},
+  publisher={Psychology Press},
+  doi={10.1080/00273170902794255}
+}
+
+@article{collinsEtAl:2001,
+  author = {Collins, L. M. and Schafer, J. L. and Kam, C.},
+  title =  {A comparison of inclusive and restrictive strategies in modern missing data procedures},
+  journal = {Pscyhological Methods},
+  year =  {2001},
+  volume = {6},
+  number = {4},
+  pages = {330--351},
+  doi={10.1037//1082-989X.6.4.330}
+}
+
+@article{dempsterEtAl:1977,
+  title={Maximum likelihood from incomplete data via the EM algorithm},
+  author={Dempster, A. P. and Laird, N. M. and Rubin, D. B.},
+  journal={Journal of the Royal Statistical Society. Series B (Methodological)},
+  pages={1--38},
+  year={1977},
+  publisher={JSTOR},
+  doi={10.2307/2984875}
+}
+
+@article{endersBandalos:2001,
+author = {Enders, Craig K. and Bandalos, Deborah L.},
+title = {The Relative Performance of Full Information Maximum Likelihood Estimation for Missing Data in Structural Equation Models},
+journal = {Structural Equation Modeling: A Multidisciplinary Journal},
+volume = {8},
+number = {3},
+pages = {430--457},
+year = {2001},
+doi = {10.1207/S15328007SEM0803_5},
+OPTURL = {http://www.tandfonline.com/doi/abs/10.1207/S15328007SEM0803_5},
+OPTeprint = {http://www.tandfonline.com/doi/pdf/10.1207/S15328007SEM0803_5}
+}
+
+@article{garnierEtAl:2013,
+title={Two-method planned missing designs for longitudinal research},
+author={Garnier-Villarreal, Mauricio and Rhemtulla, Mijke and Little, Todd D},
+journal={International Journal of Behavioral Development},
+year={2013},
+note={Manuscript in Preperation}
+}
+
+@article{gelmanEtAl:1996,
+  title={Posterior predictive assessment of model fitness via realized discrepancies},
+  author={Gelman, Andrew and Meng, Xiao-Li and Stern, Hal},
+  journal={Statistica Sinica},
+  volume={6},
+  pages={733--759},
+  year={1996}
+}
+
+@article{gelmanRubin:1992,
+  title={Inference from iterative simulation using multiple sequences},
+  author={Gelman, Andrew and Rubin, Donald B},
+  journal={Statistical science},
+  pages={457--472},
+  year={1992},
+  publisher={JSTOR}
+}
+
+@article{gonzalezGriffen:2001,
+title={Testing parameters in structural equation modeling: every "one" matters},
+author={Gonzalez, Richard and Griffin, Dale},
+journal={Psychological Methods},
+volume={6},
+number={3},
+pages={258--269},
+year={2001},
+publisher={American Psychological Association},
+doi={10.1037//1082-989X.6.3.258}
+}
+
+@article{graham:2003,
+author = {Graham, John W.},
+title = {Adding Missing-Data-Relevant Variables to FIML-Based Structural Equation Models},
+journal = {Structural Equation Modeling: A Multidisciplinary Journal},
+volume = {10},
+number = {1},
+pages = {80--100},
+year = {2003},
+doi = {10.1207/S15328007SEM1001_4},
+OPTURL = {http://www.tandfonline.com/doi/abs/10.1207/S15328007SEM1001_4},
+OPTeprint = {http://www.tandfonline.com/doi/pdf/10.1207/S15328007SEM1001_4}
+}
+
+@article{grahamEtAl:2007,
+  title={How many imputations are really needed? Some practical clarifications of multiple imputation theory},
+  author={Graham, J. W. and Olchowski, A. E. and Gilreath, T. D.},
+  journal={Prevention Science},
+  volume={8},
+  number={3},
+  pages={206--213},
+  year={2007},
+  publisher={Springer},
+  doi={10.1007/s11121-007-0070-9}
+}
+
+@article{holzingerSwineford:1939,
+  title={A study in factor analysis: The stability of a bi-factor solution.},
+  author={Holzinger, Karl John and Swineford, Frances},
+  journal={Supplementary Educational Monographs},
+  year={1939}
+}
+
+@article {honakerKing:2010,
+author = {Honaker, J. and King, G.},
+title = {What to Do about Missing Values in Time-Series Cross-Section Data},
+journal = {American Journal of Political Science},
+volume = {54},
+number = {2},
+publisher = {Blackwell Publishing Inc},
+issn = {1540-5907},
+url = {http://dx.doi.org/10.1111/j.1540-5907.2010.00447.x},
+doi = {10.1111/j.1540-5907.2010.00447.x},
+pages = {561--581},
+year = {2010}
+}
+
+@article{honakerEtAl:2011,
+    title = {{Amelia II}: A Program for Missing Data},
+    author = {Honaker, James and King, Gary and Blackwell, Matthew},
+    journal = {Journal of Statistical Software},
+    year = {2011},
+    volume = {45},
+    number = {7},
+    pages = {1--47}
+}
+
+@article{hortonEtAl:2003,
+title={A potential for bias when rounding in multiple imputation},
+author={Horton, N. J. and Lipsitz, S. R and Parzen, M.},
+journal={The American Statistician},
+year={2003},
+volume={57},
+pages={229--232}
+}
+
+@article {kingEtAl:2001,
+	title = {Analyzing Incomplete Political Science Data: An Alternative Algorithm for Multiple Imputation},
+        author = {King, G. and Honaker, J. and Joseph, A. and Scheve, K.},	
+        journal = {American Political Science Review},
+	volume = {95},
+	number = {1},
+	year = {2001},
+	month = {March},
+	pages = {49--69},
+        doi={10.2307/3117628}
+}
+
+@article{l'ecuyerEtAl:2002,
+  title={An object-oriented random-number package with many long streams and substreams},
+  author={L'ecuyer, P. and Simard, R. and Chen, E. J. and Kelton, W. D.},
+  journal={Operations Research},
+  pages={1073--1075},
+  year={2002},
+  doi={10.1287/opre.50.6.1073.358}
+}
+
+@article{leeCai:2012,
+  title={Alternative Multiple Imputation Inference for Mean and Covariance Structure Modeling},
+  author={Lee, T. and Cai, L.},
+  journal={Journal of Educational and Behavioral Statistics},
+  volume={37},
+  number={6},
+  pages={675--702},
+  year={2012},
+  doi={10.3102/1076998612458320},
+  publisher={SAGE Publications}
+}
+
+@article{littleSchluchter:1985,
+title={Maximum likelihood estimation for mixed continuous and categorical variables with missing values},
+author={Little, R. J. A. and Schluchter, M. D.},
+journal={Biometrika},
+volume={72},
+pages={497--512},
+year={1985}
+}
+
+@article{matsumotoNishimura:1998,
+  title={Mersenne twister: a 623-dimensionally equidistributed uniform pseudo-random number generator},
+  author={Matsumoto, M. and Nishimura, T.},
+  journal={ACM Transactions on Modeling and Computer Simulation (TOMACS)},
+  volume={8},
+  number={1},
+  pages={3--30},
+  year={1998},
+  publisher={ACM},
+  doi={10.1145/272991.272995}
+}
+
+@article{mengRubin:1992,
+  title={Performing likelihood ratio tests with multiply-imputed data sets},
+  author={Meng, X. L. and Rubin, D. B.},
+  journal={Biometrika},
+  volume={79},
+  number={1},
+  pages={103--111},
+  year={1992},
+  publisher={Biometrika Trust},
+  doi={10.1093/biomet/79.1.103}
+}
+
+@article{mengRubin:1993,
+  title={Maximum likelihood estimation via the {ECM} algorithm: A general framework},
+  author={Meng, Xiao-Li and Rubin, Donald B},
+  journal={Biometrika},
+  volume={80},
+  number={2},
+  pages={267--278},
+  year={1993}
+}
+
+@article{muthenAsparouhov:2012,
+  title={Bayesian structural equation modeling: A more flexible representation of substantive theory.},
+  author={Muth{\'e}n, Bengt and Asparouhov, Tihomir},
+  journal={Psychological methods},
+  volume={17},
+  number={3},
+  pages={313--335},
+  year={2012},
+  publisher={ERIC}
+}
+
+@article{olkinTate:1961,
+title={Multivariate Correlation Models with Mixed Discrete and Continuous Variables},
+author={Olkin, I. and Tate, R. F.},
+journal={The Annals of Mathematical Statistics},
+volume={32},
+number={2},
+pages={448--465},
+year={1961}
+}
+
+@article{peughEnders:2004,
+  title={Missing data in educational research: A review of reporting practices and suggestions for improvement},
+  author={Peugh, J. L. and Enders, C. K.},
+  journal={Review of educational research},
+  volume={74},
+  number={4},
+  pages={525},
+  year={2004},
+  publisher={Sage Publications},
+  doi={10.1007/s11121-007-0070-9}
+}
+
+@article{raghunathanEtAl:2001,
+title={A multivariate technique for multiply imputing missing values using a sequence of regression models},
+author={Raghunathan, T. E. and Lepkowski, J. M. and van Hoewyk, J. and Solenberger, P. W.},
+journal={Survey Methodology},
+year={2001},
+volume={27},
+number={1},
+pages={85--95}
+}
+
+@article{rhemtullaEtAl:2013,
+title={Planned missing designs to optimize the efficiency of latent growth parameter estimates},
+author={Rhemtulla, Mijke and Jia, Fan and Wu, Wei and Little, Todd D},
+journal={International Journal of Behavioral Development},
+year={2013},
+note={Manuscript in Preperation}
+}
+
+@article{rosseel:2012,
+    title = {{lavaan}: An {R} Package for Structural Equation Modeling},
+    author = {Rosseel, Yves},
+    journal = {Journal of Statistical Software},
+    year = {2012},
+    volume = {48},
+    number = {2},
+    pages = {1--36},
+    url = {http://www.jstatsoft.org/v48/i02/},
+  }
+
+@article{rubin:1976,
+author = {Rubin, Donald B.}, 
+title = {Inference and missing data}, 
+volume = {63}, 
+number = {3}, 
+pages = {581--592}, 
+year = {1976}, 
+doi = {10.1093/biomet/63.3.581}, 
+journal = {Biometrika} 
+}
+
+@article{satorraBentler:1994,
+  title={Corrections to test statistics and standard errors in covariance structure analysis.},
+  author={Satorra, A. and Bentler, P.M.},
+  year={1994},
+  publisher={Sage Publications, Inc}
+}
+
+@article{schaferGraham:2002,
+author = {Joseph L. Schafer and John W. Graham},
+title = {Missing Data: Our View of State of the Art},
+journal = {Psychological Methods},
+volume = {7},
+number = {2},
+year = {2002},
+pages = {147--177},
+doi={10.1037//1082-989X.7.2.147}
+}
+
+@article{scheinesEtAl:1999,
+  title={Bayesian estimation and testing of structural equation models},
+  author={Scheines, Richard and Hoijtink, Herbert and Boomsma, Anne},
+  journal={Psychometrika},
+  volume={64},
+  number={1},
+  pages={37--52},
+  year={1999},
+  publisher={Springer}
+}
+
+@article{tangEtAl:2005,
+title={A comparison of imputation methods in a longitudinal randomized clinical trial},
+author={Tang, L. and  Un\"{u}ntzer, J. and Song, J. and Belin, T. R.},
+journal={Statistics in Medicine},
+volume={24},
+number={14},
+pages={2111--2128},
+year={2005}
+}
+
+@article{tannerWong:1987,
+  title={The calculation of posterior distributions by data augmentation},
+  author={Tanner, Martin A and Wong, Wing Hung},
+  journal={Journal of the American statistical Association},
+  volume={82},
+  number={398},
+  pages={528--540},
+  year={1987}
+}
+
+@article{vanBuurenEtAl:2011,
+  title = {{mice}: Multivariate Imputation by Chained Equations in R},
+  author = {Stef {van Buuren} and Karin Groothuis-Oudshoorn},
+  journal = {Journal of Statistical Software},
+  year = {2011},
+  volume = {45},
+  number = {3},
+  pages = {1--67},
+  url = {http://www.jstatsoft.org/v45/i03/},
+}
+
+@article{vanBuurenEtAl:2006,
+title={Fully conditional specification in multivarite imputation},
+author={van Buuren, S. and Brand, J. P. L. and Groothuis-Oudshoorn, C. G. M. and Rubin, D. B.},
+journal={Journal of Statistical Computation and Simulation},
+year={2006},
+volume={76},
+number={12},
+pages={1049--1064}
+}
+
+@article {woodEtAl:2008,
+author = {Wood, Angela M. and White, Ian R. and Royston, Patrick},
+title = {How should variable selection be performed with multiply imputed data?},
+journal = {Statistics in Medicine},
+volume = {27},
+number = {17},
+publisher = {John Wiley & Sons, Ltd.},
+issn = {1097-0258},
+url = {http://dx.doi.org/10.1002/sim.3177},
+doi = {10.1002/sim.3177},
+pages = {3227--3246},
+keywords = {multiple imputation, variable selection, stepwise, multiply imputed data, stacked data},
+year = {2008},
+}
+
+@article{yuEtAl:2007,
+title={Evaluation of software for multiple imputation of semi-continuous data},
+author={Yu, L.-M. and Burton, A. and Rivero-Arias, O.},
+year={2007},
+journal={Statistical Methods in Medical Research},
+volume={16},
+number={3},
+pages={243--258}
+}
+
+@article {yuanBentler:2000,
+author = {Yuan, Ke-Hai and Bentler, Peter M.},
+title = {Three Likelihood-Based Methods For Mean and Covariance Structure Analysis With Nonnormal Missing Data},
+journal = {Sociological Methodology},
+volume = {30},
+number = {1},
+publisher = {Blackwell Publishers, Inc.},
+issn = {1467-9531},
+url = {http://dx.doi.org/10.1111/0081-1750.00078},
+doi = {10.1111/0081-1750.00078},
+pages = {165--200},
+year = {2000},
+}
+
+@article{yucelEtAl:2008,
+author={Yucel, Recai M. and He, Yulei and Zaslavsky, Alan M.},
+title={Using Calibration to improve rounding in imputation},
+journal={The American Statistician},
+volume={62},
+pages={1--5},
+year={2008}
+}
+
+@article{yucelEtAl:2011,
+author={Yucel, Recai M. and He, Yulei and Zaslavsky, Alan M.},
+title={Gaussian-based routines to impute categorical variables in health surveys},
+journal={Statistics in Medacine},
+volume={30},
+pages={3447--3460},
+year={2011},
+publisher={John Wiley \& Sons, Ltd.},
+doi={10.1002/sim.4355}
+}
+
+
+%%%%% Conference Proceedings %%%%%
+
+@InProceedings{allison:2005,
+title={Imputation of categorical variables with PROC MI},
+author={Allison, P. D.},
+year={2005},
+note={Paper presented during the annual meeting of the SAS Users Group}
+}
+
+@inProceedings{wuEtAl:2013,
+author={Wu, Wei and Enders, Craig D. and Jia, Fan},
+title={An comparison of imputation strategies to ordinal categorical data},
+year={2013},
+month={May},
+note={Paper presented at the annual meeting of the Modern Modeling Methods [M3] conference}
+}
+
+
+%%%%% Books %%%%%
+
+@book{allison:2002,
+title = {Missing Data},
+author = {Allison, Paul D.},
+year = {2002},
+publisher = {Sage Publications},
+address = {Thousand Oaks, CA}
+}
+
+@book{agresti:2007,
+author = {Agresti, Alan},
+title = {An Introduction to Categorical Data Analysis},
+year = {2007},
+publisher = {Wiley-Interscience},
+address = {Hoboken, NJ}
+}
+
+@book{enders:2010,
+  title={Applied missing data analysis},
+  author={Enders, C. K.},
+  year={2010},
+  publisher={The Guilford Press}
+}
+
+@book{littleRubin:1987,
+  title={Statistical analysis with missing data},
+  author={Little, R. J. A. and Rubin, D. B.},
+  year={1987},
+  publisher={Wiley New York}
+}
+
+@book{gelmanEtAl:2004,
+  title={Bayesian data analysis},
+  author={Gelman, Andrew and Carlin, John B and Stern, Hal S and Rubin, Donald B},
+  year={2004},
+  publisher={Chapman \& Hall/CRC}
+}
+
+@book{gelmanEtAl:2013,
+title={Bayesian data analysis},
+author={Gelman, Andrew and Carlin, John B. and Stern, Hal S. and Dunson, David B. and Vehtari, Aki and Rubin, Donald B.},
+year={2013},
+edition = {3},
+publisher={CRC press},
+address = {Boca Raton, FL}
+}
+
+@book{littleRubin:2002,
+  title={Statistical analysis with missing data},
+  author={Little, R. J. A. and Rubin, D. B.},
+  volume={333},
+  year={2002},
+  publisher={Wiley-Interscience}
+}
+
+@book{rubin:1987,
+  title={Multiple imputation for nonresponse in surveys},
+  author={Rubin, D. B.},
+  volume={519},
+  year={1987},
+  publisher={Wiley Online Library}
+}
+
+@book{schafer:1997,
+  title={Analysis of incomplete multivariate data},
+  author={Schafer, J. L.},
+  volume={72},
+  year={1997},
+  publisher={Chapman \& Hall/CRC}
+}
+
+@book{vanBuuren:2012,
+  title={Flexible Imputation of Missing Data},
+  author={van Buuren, Stef},
+  pages={342},
+  year={2012},
+  publisher={Chapman \& Hall/CRC},
+  address={Boca Raton, FL}
+}
+
+
+%%%%% Edited Volumes %%%%%
+
+@InCollection{satorraBentler:1994,
+  author = {Satorra, A. and Bentler, P. M.},
+  title = {Corrections to test statistics and standard errors in covariance structure analysis},
+  booktitle = {Latent variables analysis: Applications for developmental research},
+  pages = {399-419},
+  publisher = {Sage Publications, Inc.},
+  year = {1994},
+  editor = {von Eye, Alexander and Clogg, Clifford C.},
+  address = {Thousand Oaks, CA},
+ }
+
+@InCollection{littleEtAl:inPress,
+author={Little, Todd D. and Lang, Kyle M. and Wu, Wei and Rhemtulla, Mijke},
+title={Missing Data},
+booktitle={Developmental Psychopathology},
+edition={3},
+editor={Cicchetti, Dante},
+year={in press}
+}
+
+
+%%%%% Theses %%%%%%
+
+@PhdThesis{brand:1999,
+  author={Brand, J. P. L.},
+  title={Development, Implementation and Evaluation of Multiple Imputation Strategies for the Statistical Analysis of Incomplete Data Sets},
+  school={Erasmus University},
+  year={1999},
+  type={PhD Thesis},
+  address={Rotterdam}
+}
+
+%%%%% Software %%%%%
+
+@Manual{amelia2,
+  author = 	 {Honaker, James and King, Gary and Blackwell, Matthew},
+  title = 	 {Amelia II: A Program for Missing Data},
+  month = 	 {June},
+  year = 	 {2012},
+  note = 	 {R package version 1.6-3},
+  url = 	 {http://cran.r-project.org/web/packages/Amelia/index.html}
+}
+
+@Manual{lavaan,
+  author = 	 {Rosseel, Yves},
+  title = 	 {lavaan: Latent Variable Analysis},
+  month = 	 {May},
+  year = 	 {2012},
+  note = 	 {R package version 0.4-14},
+  OPTannote = 	 {}
+}
+
+@anual{mix,
+author = {Schafer, Joseph L.},
+title = {Estimation/Multiple Imputation for Mixed Categorical and Continuous Data},
+month = {August},
+year = {2013},
+note = {R package version 1.0-8},
+url = {http://sites.stat.psu.edu/~jls/misoftwa.html}
+}
+
+@Manual{mvtnorm,
+    title = {{mvtnorm}: Multivariate Normal and t Distributions},
+    author = {Genz, Alan and Bretz, Frank and Miwa, Tetsuhisa and Mi, Xuefei and Leisch, Friedrich and Scheipl, Fabian and Hothorn, Torsten},
+    year = {2012},
+    note = {R package version 0.9-9992},
+    url = {http://CRAN.R-project.org/package=mvtnorm},
+  }
+
+@Manual{R,
+       title        = {R: A Language and Environment for Statistical Computing},
+       author       = {{R Development Core Team}},
+       organization = {R Foundation for Statistical Computing},
+       address      = {Vienna, Austria},
+       year         = {2011},
+       note         = {{ISBN} 3-900051-07-0},
+       url          = {http://www.R-project.org}
+     }
+
+@Manual{snowFT,
+  author = {\v{S}ev\v{c}\'{i}kov\'{a}, H. and Rossini, A. J.},
+  title = {snowFT: Fault Tolerant Simple Network of Workstations},
+  month = {June},
+  year = {2010},
+  url = {http://www.stat.washington.edu/hana/parallel/snowFT-doc.pdf},
+  note = {R package version 1.2-0}
+}
+
+
+%%%%% Miscellaneous %%%%%
+
+@Manual{asparouhovMuthen:2010,
+  title = 	 {Chi-Square Statistics with Multiple Imputation},
+  OPTkey = 	 {},
+  author = 	 {Asparouhov, Tihomir and Muth\'{e}n, Bengt},
+  OPTorganization = {Muth\'{e}n \& Muth\'{e}n},
+  OPTaddress = 	 {Los Angeles},
+  OPTedition = 	 {},
+  month = 	 {July},
+  year = 	 {2010},
+  note = 	 {Technical Appendix. Muth\'{e}n \& Muth\'{e}n: Los Angeles},
+  OPTannote = 	 {}
+}
