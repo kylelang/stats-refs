@@ -1,2 +1,2 @@
-# missingDataReadings
-This repository will house a reading list for missing data references.
+# references
+This repository contains thematically organized reading lists/bibtex files.
