@@ -1,0 +1,69 @@
+%%% Title:    Gentle Introductory Reading List: Missing Data
+%%% Author:   Kyle M. Lang
+%%% Created:  2019-09-16
+%%% Modified: 2019-09-18
+
+\documentclass[12pt]{article}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage[natbibapa]{apacite}
+\usepackage{multibib}
+\usepackage[libertine]{newtxmath}
+\usepackage{hyperref}
+\usepackage{datetime2}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
+
+\newcites{b,intro,mi,ml}{Books, Introductions/Reviews, MI-Focused, ML-Focused}
+
+% Set the title and author info
+\title{Missing Data Analysis\\ \Large Gentle Introductory Reading List}
+\author{Compiled by Kyle M. Lang}
+
+\raggedright
+
+\begin{document}
+
+\maketitle
+
+\nociteb{
+  allison:2002,
+  enders:2010,
+  graham:2012%
+}
+\nociteintro{
+  schaferGraham:2002,
+  graham:2009,
+  littleEtAl:2013,
+  langLittle:2018%
+}
+\nocitemi{
+  rubin:1996%
+}
+\nociteml{
+  enders:2001-mlr,
+  enders:2001-primer,
+  endersBandalos:2001%
+}
+
+\bibliographystyleb{apacite}
+\bibliographyb{../../bibtex/missingData/books.bib}
+
+\bibliographystyleintro{apacite}
+\bibliographyintro{../../bibtex/missingData/papers.bib}
+
+\bibliographystylemi{apacite}
+\bibliographymi{../../bibtex/missingData/papers.bib}
+
+\bibliographystyleml{apacite}
+\bibliographyml{../../bibtex/missingData/papers.bib}
+
+\end{document}
