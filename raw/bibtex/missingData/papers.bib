@@ -525,7 +525,21 @@ journal = {Survey Methodology},
 volume = {27},
 number = {1},
 pages = {85--96},
-year = {2001}
+year = {2001},
+annote = 
+	{
+	In this paper, Raghunathan \textit{et al} introduce the SRMI (Sequential Regression 
+	Multivariate Imputation). The apporach imputes missing values on a variable-by-variable
+	basis, by using posterior predictive disitrbutions of the missing data, conditional on
+	the observed data. Apart from descirbing the principles, strengths, and weakness
+	of the appraoch, their work also provides detailed instructions on how to perform the
+	imputation according to SRMI (see Appendix A for a precise discussion on how to draw
+	from a variety of regression models supported by SRMI).
+	Two case-studies and one simulation study are contextually presented and they are 
+	instrumental in showing how the SMRI apporach works compared to complete-case analysis
+	and the Multiple Imputation based on a joint multivariate model.
+	}
+
 }
 
 @article{reiter:2005,
@@ -577,7 +591,23 @@ journal = {Journal of Business \& Economic Statistics},
 volume = {4},
 number = {1},
 pages = {87--94},
-year = {1986}
+year = {1986},
+annote = 
+	{
+	
+	This work reviews the state of multiple imputation 18 years after the publication 
+	of his seminal works published in 1976 and 1978. This paper clarifies the two
+	main goals that Multiple Imputation was designed to achive: the basic objective 
+	of allowing the data ultimate users to apply the same analytical methods as if 
+	the data had been complete; and the supplemental objective of granting analyses that 
+	are statistically valid for a scientifc estimand'. The concept of statistcal validity 
+	is operationalised with clarity by distinguishing between two specification: randomization 
+	validity and confidence validity.
+	Furthermore, the concept of \textit{proper} mulitple imputation is exapanded upon by 
+	summarizing its main requirements.
+	Finally some criticisms to MI are addressed by using these concepts. 
+	
+	}
 }
 
 @article{rubin:1996,
@@ -748,7 +778,39 @@ volume = {30},
 number = {4},
 pages = {377--399},
 year = {2011},
-publisher = {Wiley Online Library}
+publisher = {Wiley Online Library},
+annote = 
+	{
+	
+	White's contribution provides some useful comparative guidelines and 
+	recommendations on different aspects of MI:
+	\begin{itemize}
+	
+		\item Handling different dependent variable distirbutions/natures. In particular, there is
+		a helpful section dealing with how to handle imputation for skewed continuous vairables.
+	
+		\item Variable selection - What to include and, more importantly hot to include 
+		all the variables of the analysis model in the imputation model (i.e. allowing for 
+		qudratic terms and interactions).  Three main ways of doing so are presented 
+		(i.e. passive apporach, improved passive apporach using PMM, 
+		and JAV).  Altought this section does provide a good comparative overview of the 
+		methods, it is not particularly helpful in describing the methods for a novice audience.
+		Better resources that do accomplish such task are: INSERT REF HERE.
+		
+		\item Number of imputations – The authors criticize the \textit{efficiency argument} (that
+		usually leads to the rule of thumb  \textit{m} = 5 is adequate for FMI $\leq$ .25) thorguh
+		the \textit{replicability argument}, centering the discussion around the decision of \textit{m}
+		in terms of Monte Carlo errors. The authros's rule of thumb is that \textit{m} $\geq$ of 
+		incomplete cases.
+		
+		\item Limitations and pitfalls of MI – Apart from the lack of theoretical background,
+		the authors discuss the following pitfalls: perfect prediction (potentially a problem
+		when the dependent variable is categorical); sensitivity to MAR violation, non-convergence 
+		issues; and the problem of too many variables.
+		
+	\end{itemize}
+	
+	}
 }
 
 @article{vanBuurenEtAl:2006,
@@ -758,7 +820,26 @@ journal={Journal of Statistical Computation and Simulation},
 year={2006},
 volume={76},
 number={12},
-pages={1049--1064}
+pages={1049--1064},
+annote = 
+	{
+	Algorithms to perform Multiple Imputation by FCS with different types
+	of dependent vairables are presented in Appendix A of this paper.
+	Appendix B describes a method to generate nonmonotone multivariate
+	missing data under MAR.
+	In the main text, after a concise introduction to imputation by FCS, a brief but rigorous 
+	definition of \textit{compatibility} between conditonal distributions is given in 
+	this paper. A good technical complement for an interested read is 
+	\cite{arnold2001conditionally}. Simulations and study cases are then discussed 
+	in detail for both univariate and multivariate cases, accounting for different
+	variable types (i.e. continous, dichotomous, and polytomous). These studies
+	highlight the performances of FCS multiple imputation as compared to 
+	complete-case analysis in terms of bias and coverage of the confidence intervals.
+	Furthermore, a simulation study to assess the consequences of (in)compatibility.
+	This is just an exemplifying scenario: not all possibile incompatibility schemes can
+	be considered. Yet, it does provide compelling evidence in favor of FCS being 
+	robust to (clear) incompatibility.
+	}
 }
 
 @article{vonHippel:2007,
