@@ -24,7 +24,66 @@ title = {Applied missing data analysis},
 author = {Enders, C. K.},
 year = {2010},
 publisher = {The Guilford Press},
-address = {New York, NY}
+address = {New York, NY},
+annote =
+	{
+  	This is a very accessible book that does also cover technical details 
+		of missing data handling strategies in an approachable way, 
+		without dumbing them down.
+    	\begin{itemize}
+    
+	        \item \textbf{Missing data mechanisms} - The explanation of 
+			the mechanisms is a very approachable and non-technical. 
+			However, the book provides a nice overview of how to 
+			\textbf{test for the MCAR} (see section 1.9).
+        
+	        \item \textbf{Traditional imputation methods} - Chapter 2 is
+	       		entirely dedicated to describing these methods in great 
+			detail, and it provides great insights in their problems 
+			(e.g. biasing estimates, reduction of SE).
+        
+	        \item \textbf{Maximum Likelihood Missing Data Handling} - The 
+			book dedicates chapter 4 to the detailed description of 
+			this handling technique, the only other acceptable alternative 
+			to multiple imputation (see also chapter 3 for a good 
+			overview of Maximum Likelihood estimation in general).
+        
+	        \item \textbf{Multiple Imputation} - The discussion of multiple 
+			imputation is mainly divided into two chapters, 7 and 8, 
+			where the author describes the imputation, and the analysis 
+			and pooling phases, respectively, in detail. The imputation 
+			phase is described according to the \textbf{data augmentation 
+			algorithm} \footnote{There is a some confusion on how the use 
+			of this term to refer to the this imputation algorithm. In 
+			particular it did not seem to be consistent w/ how \cite{buurenvan2018flexible} 
+			used it. Pay attention to this in future readings}. Great 
+			attention is payed to the Bayesian nature of this algorithm 
+			(there even is an introductory chapter on Bayesian statistics). 
+			The pooling phase describes both the pooling of point estimates 
+			(section 8.3), and standard errors (section 8.5), along with 
+			(multi)parameter significance testing (D1, D2, etc. [see sections 
+			8.11 through 8.13].
+
+		\item \textbf{Diagnostic techniques} - Great attention is dedicated in 
+			chapter 7 to the description of convergence diagnostics in the 
+			imputation phase. In particular, the meaning of convergence in 
+			this context [section 7.7], time-series plots [section 7.9],
+		       	worst linear function [section 7.9], and auto-correlation function
+		       	plots (correlogram) [section 7.10], (exploratory) multiple chains 
+			[section 7.11] are all discussed in details and w/ examples. In section 9.2 
+			there is also a detailed description of some solutions to convergence 
+			issues (and related \textit{too-many-columns} issues), like the 
+			\textbf{ridge prior} for the covariance matrix, a semi-informative
+		       	prior that adds some information coming from imaginary data records 
+			to reduce the impact of too many variables.
+        
+        	\item \textbf{Dimensionality issues} (p>n) Apart from the description of the 
+			ridge prior for covariance matrix in section 9.2, the book also 
+			describes specific methods for questionnaires imputations (i.e. 
+			scale-level and duplicate-scale imputation, and three-step item 
+			level imputation [section 9.6]
+	\end{itemize}
+	}
 }
 
 @book{graham:2012,

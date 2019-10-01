@@ -495,7 +495,21 @@ title = {A missing information principle: {Theory} and applications},
 author = {Orchard, Terence and Woodbury, Max A},
 booktitle = {Proceedings of the Sixth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Theory of Statistics},
 year = {1972},
-organization = {The Regents of the University of California}
+organization = {The Regents of the University of California},
+annote = 
+	{
+	The authros provide a technical description of the Missing Information
+		Principle defined through the decompostion of the infomration 
+		matrix for a vector of parameters of interest $\theta$.
+		The lost (missing) information is defined as the difference between the 
+		information matrix for $\theta$ in the hypotetical complete dataset,
+		and the information matrix for $\theta$ obtained with just the
+		observed cases. This decomposition is also used to describe the increase
+		in variance in the parameter estimates caused by the missing data. \\
+
+	For a more approachable definition of the Missing Information Principle see
+		\cite{savaleiRhemtulla:2012}.
+	}
 }
 
 @article{piela:2002,
@@ -591,7 +605,17 @@ journal = {Journal of Business \& Economic Statistics},
 volume = {4},
 number = {1},
 pages = {87--94},
-year = {1986},
+year = {1986}
+}
+
+@article{rubin:1996,
+title = {Multiple imputation after 18+ years},
+author = {Rubin, Donald B},
+journal = {Journal of the American Statistical Association},
+volume = {91},
+number = {434},
+pages = {473--489},
+year = {1996},
 annote = 
 	{
 	
@@ -608,16 +632,6 @@ annote =
 	Finally some criticisms to MI are addressed by using these concepts. 
 	
 	}
-}
-
-@article{rubin:1996,
-title = {Multiple imputation after 18+ years},
-author = {Rubin, Donald B},
-journal = {Journal of the American Statistical Association},
-volume = {91},
-number = {434},
-pages = {473--489},
-year = {1996}
 }
 
 @article{saar-tsechanskyProvost:2007,
@@ -652,9 +666,10 @@ publisher = {Taylor \& Francis},
 annote = 
 	{
 	This article provides a short yet insightgul review of the Missing Information 
-		Principle. According to it, the ammount of information available in an 
-		incomplete dataset on a particular parameter is equal to complete information 
-		minus missing information. \\
+		Principle (an interested reader may want to consult \cite(orchardWoodbury:1972)
+		for a more technical presentation of the same concept). According to it, 
+		the missing information for a parameter estimation due to missing cases is equal to the difference
+		between the complete-data information matrix and the observed-data information matrix. \\
 	Subsequently, the definition of the Fraction of Missing Information (FMI) is exploared
 		under both the Maximum Likelihood and the Multiple Imputation framework. The 
 		fundamental contribution of this paper is showing how FMI is not a prerogative
@@ -784,7 +799,7 @@ pages = {926--949},
 doi = {10.1016/j.csda.2004.11.009}
 }
 
-@article{whiteEtAl:2011,
+@article{ahiteEtAl:2011,
 title = {Multiple imputation using chained equations: {Issues} and guidance for practice},
 author = {White, Ian R and Royston, Patrick and Wood, Angela M},
 journal = {Statistics in Medicine},
