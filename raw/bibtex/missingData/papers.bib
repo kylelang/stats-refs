@@ -94,8 +94,33 @@ year = {2001},
 volume = {6},
 number = {4},
 pages = {330--351},
-doi = {10.1037//1082-989X.6.4.330}
-}
+doi = {10.1037//1082-989X.6.4.330},
+annote = 
+	{
+	Collins \textit{et al} investigate the effects of an inclusive \textit{vs} a restrictive strategy to the use of
+		auxiliary vairables in the missing data handling model of either a ML (maximum likelihood) 
+		or MI (Multiple Imputation) approach. \\
+
+	The authors distinguish between three categories of auxiliary vairables (depending on their 
+		correlation with the variable(s) with missing values of interest and the missingness 
+		mechanism). \\
+	
+	Thorugh 4 different simulation setups, the they provide insights on the consequences of including
+		or excluding auxiliabry variables, from each of these categories, and ultimetly provide compelling
+		evidence to prefer an inclusive strategy. \\
+
+	A final point that is stressed by the artcile is that these effects heavely depend on the type of MAR. For 
+		example, in their simulations they found that parameter estiamte of the mean value a variable Y of
+		interest is biased when the auxiliary vairable Z is excluded from the data handling model if the 
+		probability of missingess is linearly related to Z (MAR-linear); however, that's not the case when 
+		the probability of missigness is larger for extreme values of Z or is a function of the correlation 
+		between Z and Y. \\
+
+	An interesting point is raised regarding the ease of implementation of the inclusive strategy. In particular, 
+		the authors point out that, while the inclusion of auxiliary variables is straightforward in the MI 
+		framework, current (up to 2001) softwere implementations of ML methods do no facilitate it. This topic 
+		is thoroughly explored by \cite{graham:2003}.
+	}
 
 @article{conversanoSiciliano:2009,
 author = {Conversano, Claudio and Siciliano, Roberta},
@@ -266,7 +291,20 @@ volume = {10},
 number = {1},
 pages = {80--100},
 year = {2003},
-doi = {10.1207/S15328007SEM1001_4}
+doi = {10.1207/S15328007SEM1001_4},
+annote =
+	{
+	The author effectively showed thorugh multiple
+		simulation studies that including auxiliary vairables, when using a FIML apporach to
+		handling and analysing datasets with missing data points, can be done relativly easly
+		under a structural equation modelling framework. \\
+
+	With this paper, Graham introduced the \textit{Saturated Correlated model} and 
+		\textit{the extra dv model} to include auxiliary vairbales in a SEM model. Ultimately,
+		he showed that it is possible to include auxiliary vairables in a ML missing data 
+		handling procedure, without affecting the substantive model (that is to say obtaining 
+		the same parameter estimates, standard errors, and estimates of quality of fit).
+	}	
 }
 
 @article{graham:2009,
@@ -666,14 +704,16 @@ publisher = {Taylor \& Francis},
 annote = 
 	{
 	This article provides a short yet insightgul review of the Missing Information 
-		Principle (an interested reader may want to consult \cite(orchardWoodbury:1972)
+		Principle (an interested reader may want to consult \cite{orchardWoodbury:1972}
 		for a more technical presentation of the same concept). According to it, 
 		the missing information for a parameter estimation due to missing cases is equal to the difference
 		between the complete-data information matrix and the observed-data information matrix. \\
+
 	Subsequently, the definition of the Fraction of Missing Information (FMI) is exploared
 		under both the Maximum Likelihood and the Multiple Imputation framework. The 
 		fundamental contribution of this paper is showing how FMI is not a prerogative
 		of MI. \\
+
 	A final contribution is a detailed discussion of three different possible interpretations
 		of FMI: (relative) loss of (estimation) efficacy, loss of statistical power;
        		width inflation factor (i.e. how much bigger are the confidence intervals).	
@@ -799,7 +839,7 @@ pages = {926--949},
 doi = {10.1016/j.csda.2004.11.009}
 }
 
-@article{ahiteEtAl:2011,
+@article{whiteEtAl:2011,
 title = {Multiple imputation using chained equations: {Issues} and guidance for practice},
 author = {White, Ian R and Royston, Patrick and Wood, Angela M},
 journal = {Statistics in Medicine},
