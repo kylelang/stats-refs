@@ -109,18 +109,20 @@ annote =
 		or excluding auxiliabry variables, from each of these categories, and ultimetly provide compelling
 		evidence to prefer an inclusive strategy. \\
 
-	A final point that is stressed by the artcile is that these effects heavely depend on the type of MAR. For 
-		example, in their simulations they found that parameter estiamte of the mean value a variable Y of
-		interest is biased when the auxiliary vairable Z is excluded from the data handling model if the 
-		probability of missingess is linearly related to Z (MAR-linear); however, that's not the case when 
-		the probability of missigness is larger for extreme values of Z or is a function of the correlation 
-		between Z and Y. \\
-
 	An interesting point is raised regarding the ease of implementation of the inclusive strategy. In particular, 
 		the authors point out that, while the inclusion of auxiliary variables is straightforward in the MI 
 		framework, current (up to 2001) softwere implementations of ML methods do no facilitate it. This topic 
-		is thoroughly explored by \cite{graham:2003}.
-	}
+		is thoroughly explored by Graham (2003). \\
+
+	A final point stressed by the article is that these effects heavely depend on the type of MAR. For 
+		example, in their simulations Collins \textit{et al} found that the estiamted mean of a variable 
+		Y of interest was biased when the auxiliary vairable Z was excluded from the data handling model, if the 
+		probability of missingess was linearly related to Z (MAR-linear); however, that was not the case when 
+		the probability of missigness was larger for extreme values of Z or a function of the correlation 
+		between Z and Y.
+
+		}
+}
 
 @article{conversanoSiciliano:2009,
 author = {Conversano, Claudio and Siciliano, Roberta},
@@ -390,7 +392,7 @@ journal = {International Journal of Computer Applications},
 volume = {48},
 number = {5},
 year = {2012},
-pages = {23--28}
+pages = {23--28},
 doi = {10.5120/7345-0160}
 }
 
@@ -546,7 +548,7 @@ annote =
 		in variance in the parameter estimates caused by the missing data. \\
 
 	For a more approachable definition of the Missing Information Principle see
-		\cite{savaleiRhemtulla:2012}.
+	Savalei and Rhemtulla (2012).
 	}
 }
 
@@ -656,19 +658,20 @@ pages = {473--489},
 year = {1996},
 annote = 
 	{
-	
-	This work reviews the state of multiple imputation 18 years after the publication 
-	of his seminal works published in 1976 and 1978. This paper clarifies the two
-	main goals that Multiple Imputation was designed to achive: the basic objective 
-	of allowing the data ultimate users to apply the same analytical methods as if 
-	the data had been complete; and the supplemental objective of granting analyses that 
-	are statistically valid for a scientifc estimand'. The concept of statistcal validity 
-	is operationalised with clarity by distinguishing between two specification: randomization 
-	validity and confidence validity.
+	In this work, Rubin reviews the state of multiple imputation 18 years after the publication 
+		of his seminal works published in 1976 and 1978. This paper clarifies the two
+		main goals that Multiple Imputation was designed to achieve: the basic objective 
+		of allowing the data ultimate users to apply the same analytical methods as if 
+		the data had been complete; and the supplemental objective of granting analyses that 
+		are statistically valid for a scientifc estimand. \\
+
+	The concept of statistcal validity is operationalised with clarity by distinguishing between 
+		two specification: randomization validity and confidence validity. \\
+
 	Furthermore, the concept of \textit{proper} mulitple imputation is exapanded upon by 
-	summarizing its main requirements.
-	Finally some criticisms to MI are addressed by using these concepts. 
+		summarizing its main requirements. \\
 	
+	Finally some criticisms to MI are addressed through these concepts. 	
 	}
 }
 
@@ -704,7 +707,7 @@ publisher = {Taylor \& Francis},
 annote = 
 	{
 	This article provides a short yet insightgul review of the Missing Information 
-		Principle (an interested reader may want to consult \cite{orchardWoodbury:1972}
+		Principle (an interested reader may want to consult Orchard and Woodbury (1972)
 		for a more technical presentation of the same concept). According to it, 
 		the missing information for a parameter estimation due to missing cases is equal to the difference
 		between the complete-data information matrix and the observed-data information matrix. \\
@@ -893,21 +896,23 @@ pages={1049--1064},
 annote = 
 	{
 	Algorithms to perform Multiple Imputation by FCS with different types
-	of dependent vairables are presented in Appendix A of this paper.
-	Appendix B describes a method to generate nonmonotone multivariate
-	missing data under MAR.
+		of dependent vairables are presented in Appendix A of this paper.
+		Appendix B describes a method to generate nonmonotone multivariate
+		missing data under MAR. \\
+
 	In the main text, after a concise introduction to imputation by FCS, a brief but rigorous 
-	definition of \textit{compatibility} between conditonal distributions is given in 
-	this paper. A good technical complement for an interested read is 
-	\cite{arnold2001conditionally}. Simulations and study cases are then discussed 
-	in detail for both univariate and multivariate cases, accounting for different
-	variable types (i.e. continous, dichotomous, and polytomous). These studies
-	highlight the performances of FCS multiple imputation as compared to 
-	complete-case analysis in terms of bias and coverage of the confidence intervals.
-	Furthermore, a simulation study to assess the consequences of (in)compatibility.
-	This is just an exemplifying scenario: not all possibile incompatibility schemes can
-	be considered. Yet, it does provide compelling evidence in favor of FCS being 
-	robust to (clear) incompatibility.
+		definition of \textit{compatibility} between conditonal distributions is given in 
+		this paper. A good technical complement for an interested read is 
+		Arnold (2001). Simulations and study cases are then discussed 
+		in detail for both univariate and multivariate cases, accounting for different
+		variable types (i.e. continous, dichotomous, and polytomous). These studies
+		highlight the performances of FCS multiple imputation as compared to 
+		complete-case analysis in terms of bias and coverage of the confidence intervals. \\
+
+	Furthermore, a simulation study is performed to assess the consequences of (in)compatibility.
+		This is just an exemplifying scenario: not all possibile incompatibility schemes can
+		be considered. Yet, it does provide compelling evidence in favor of FCS being 
+		robust to (clear) incompatibility.
 	}
 }
 
@@ -928,7 +933,27 @@ journal={Sociological Methodology},
 volume={39},
 number={1},
 pages={265--291},
-year={2009}
+year={2009},
+annote={
+	Transformed variables such as squared and interaction terms need special attention
+		when Multiple Imputation is performed. This article compares two main methods
+		to impute them: the \textit{transform then impute} and the \textit{impute then transform} 
+		approach. \\
+
+	Through extreme missing data scenarios (100\% missignes), and example data analyses, the author
+		shows that the \textit{transform then impute} method is the one that best preserves
+		the mean and covariance structure of the original data and provides unbiased point
+		estimates of regression estimates. As a result, he strongly reccomends such method. \\
+
+	Some variants of these methods are included in the comparison, namely \textit{passive imputation},
+       		a more sophisticated but equally flawed version of the \textit{impute then transform} appraoch.	
+		and \textit{stratify, then impute} for interactions between categorical and a continuous
+		variables. \\
+
+	The main setup considered in this study is that of a linear regression model fitted to a
+		dataset with MAR missing data. However, the author adresses the extension of
+		the claims to models for binary dependent variables.	
+	}
 }
 
 @article{yoonLee:1999,
