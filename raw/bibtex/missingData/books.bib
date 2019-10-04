@@ -24,46 +24,7 @@ title = {Applied missing data analysis},
 author = {Enders, C. K.},
 year = {2010},
 publisher = {The Guilford Press},
-address = {New York, NY},
-annote =
-	{
-  	This is a very accessible book that does also cover technical details 
-		of missing data handling strategies in an approachable way, 
-		without dumbing them down.
-    	\begin{itemize}
-
-		\item \textbf{Missing data mechanisms} - The explanation of 
-			the mechanisms is a very approachable and non-technical. 
-			However, the book provides a nice overview of how to 
-			\textbf{test for the MCAR} (see section 1.9).
-
-	 	\item \textbf{Traditional imputation methods} - Chapter 2 is
-	       		entirely dedicated to describing these methods in great 
-			detail, and it provides great insights in their problems 
-			(e.g. biasing estimates, reduction of SE).
-
-		\item \textbf{Maximum Likelihood Missing Data Handling} - The 
-			book dedicates chapter 4 to the detailed description of 
-			this handling technique, the only other acceptable alternative 
-			to multiple imputation (see also chapter 3 for a good 
-			overview of Maximum Likelihood estimation in general).
-
-		\item \textbf{Multiple Imputation} - The discussion of multiple 
-			imputation is mainly divided into two chapters, 7 and 8, 
-			where the author describes the imputation, and the analysis 
-			and pooling phases, respectively, in detail. The imputation 
-			phase is described according to the \textbf{data augmentation 
-			algorithm}\footnote{There is a some confusion on how the use 
-			of this term to refer to the this imputation algorithm. In 
-			particular it did not seem to be consistent with how van Buuren (2012)
-			used it. Pay attention to this in future readings}. Great 
-			attention is payed to the Bayesian nature of this algorithm 
-			(there even is an introductory chapter on Bayesian statistics).
-			The pooling phase describes both the pooling of point estimates 
-			(section 8.3), and standard errors (section 8.5), along with 
-			(D1, D2, etc. [see sections 8.11 through 8.13]).
-	\end{itemize}
-	}
+address = {New York, NY}
 }
 
 @book{graham:2012,
@@ -108,74 +69,5 @@ title = {Flexible Imputation of Missing Data},
 year = {2012},
 publisher = {{CRC} Press},
 address = {Boca Raton, FL},
-doi = {10.1201/b11826},
-annote={
-    This book is practically a technical companion to the R package that implements
-    the MICE algorithm.
-
-    \begin{itemize}
-    
-        \item The book describes the \textbf{missing data mechanisms} following the 
-		classification of Rubin (1076) and describing the missing 
-		data models in accessible probabilistic terms (see sections 1.2 and 2.2).
-	       	The concept of ignorability is also precisely defined in section 2.2.5 
-		and 2.2.6 [see also 6.2]. \\
-		A guide to \textbf{generating MAR} data is presented in section 3.2.4 
-		(bivariate) and 3.2.5 (multivariate missingness).
-        
-        \item \textbf{Missing data handling techniques} - The bulk of the book is focused 
-		on multiple imputation methods (maximum Likelihood is not described, and 
-		very little space is dedicated to traditional methods on ad hoc solutions 
-		[see section 1.3]), and in particular to the MICE algorithm. \\
-        	The treatment of multiple imputation is dealt with in first in the case of 
-		univariate missingness (ch. 3) and then extended to a multivariate scenario 
-		(ch. 4). 
-        	\begin{itemize}
-
-            	\item Chapter 3 - Focuses on the ability of MI to include not only noise 
-			around the prediction but also model (parameters) uncertainty when 
-			using normal models. Bayesian multiple imputation and bootstrap 
-			multiple imputation are presented as alternative ways of implementing 
-			the “\textbf{predict + noise + parameters uncertainty}” method 
-			[see section 3.2.2]. Other approaches presented here: predictive 
-			mean matching, and classification and regression trees.
-
-            	\item Chapter 4 - Focuses on multiple imputation techniques that deal with 
-			multivariate missing data. The main difference w/ respect to univariate 
-			cases is that multiple patterns of missingness are possible when more 
-			variables are missing a value. The chapter describes first the types of 
-			missing data patterns, and describes how to use MICE to detect/describe 
-			these patterns. The rest of the chapter is dedicated to describing three 
-			approaches to multivariate missing data patterns: monotone data 
-			imputation, joint modelling (\textbf{JM}), and full conditional 
-			specification (\textbf{FCS}). FCS is the preferred approach by the book.
-			The MICE algorithm is one way of implementing the FCS method.
-
-        	\end{itemize}
-        
-        \item Analysis and \textbf{pooling phase} - These are dealt with in chapter 5. In 
-		particular, section 5.3 deals with multiparameter inference describing D1 
-		(multivariate Wald test), D2 (combining test statistics, in general not 
-		specifically Wald test), and D3 (likelihood ratio tests).
-        
-        \item \textbf{Diagnostic techniques} are also well discussed (Ch. 6) - Two particular 
-		aspects are discussed:
-
-        	\begin{itemize}
-
-            		\item Algorithmic convergence diagnostic (section 6.5.2)
-
-            		\item Model fit diagnostic (section 6.6), done according to the concept of 
-	    			\textit{distributional discrepancy} between imputed and observed 
-				data and performed through the use of diagnostic plots.
-        	\end{itemize}
-        
-        \item \textbf{Dimensionality issues} (p>n) - The text deals with the issue of 
-		dimensionality mainly by guiding the researcher through the process of reducing 
-		the number of variables to be included in the model rather than suggesting any 
-		way of dealing with the issue at hand (see for example section 9.1 and 11.2)
-        
-    \end{itemize}
-}
-
+doi = {10.1201/b11826}
 }

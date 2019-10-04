@@ -23,17 +23,6 @@ pages = {200--203},
 year = {1957}
 }
 
-@article{andridgeLittle:2010,
-title = {A review of hot deck imputation for survey non-response},
-author = {Andridge, Rebecca R and Little, Roderick J A},
-journal = {International Statistical Review},
-volume = {78},
-number = {1},
-pages = {40--64},
-year = {2010},
-publisher = {Wiley Online Library}
-}
-
 @article{aydilekArslan:2013,
 title = {A hybrid method for imputation of missing values using optimized fuzzy \emph{c}-means with support vector regression and a genetic algorithm},
 author = {Aydilek, Ibrahim Berkan and Arslan, Ahmet},
@@ -41,17 +30,6 @@ journal = {Information Sciences},
 volume = {233},
 pages = {25--35},
 year = {2013}
-}
-
-@article{baraldiEnders:2010,
-title = {An introduction to modern missing data analyses},
-author = {Baraldi, Amanda N and Enders, Craig K},
-journal = {Journal of School Psychology},
-volume = {48},
-number = {1},
-pages = {5--37},
-year = {2010},
-publisher = {Elsevier}
 }
 
 @article{borgoniBerrington:2013,
@@ -129,7 +107,7 @@ pages = {47--58},
 doi = {10.1016/j.datak.2012.12.006}
 }
 
-@article{dempsterEtAl:1977,
+@article{dempsterEtAl:1977_em,
 title = {Maximum likelihood from incomplete data via the EM algorithm},
 author = {Dempster, A. P. and Laird, N. M. and Rubin, D. B.},
 journal = {Journal of the Royal Statistical Society. Series B (Methodological)},
@@ -147,50 +125,6 @@ number = {12},
 year = {2011},
 pages = {3232--3243},
 doi = {10.1016/j.csda.2011.06.006}
-}
-
-@article{enders:2001-mlr,
-title = {The performance of the full information maximum likelihood estimator in multiple regression models with missing data},
-author = {Enders, Craig K},
-journal = {Educational and Psychological Measurement},
-volume = {61},
-number = {5},
-pages = {713--740},
-year = {2001},
-publisher = {Sage Publications Sage CA: Thousand Oaks, CA}
-}
-
-@article{enders:2001-primer,
-title = {A primer on maximum likelihood algorithms available for use with missing data},
-author = {Enders, Craig K},
-journal = {Structural Equation Modeling},
-volume = {8},
-number = {1},
-pages = {128--141},
-year = {2001},
-publisher = {Taylor \& Francis}
-}
-
-@article{enders:2013,
-title = {Dealing with missing data in developmental research},
-author = {Enders, Craig K},
-journal = {Child Development Perspectives},
-volume = {7},
-number = {1},
-pages = {27--31},
-year = {2013},
-publisher = {Wiley Online Library}
-}
-
-@article{endersBandalos:2001,
-title = {The relative performance of full information maximum likelihood estimation for missing data in structural equation models},
-author = {Enders, Craig K and Bandalos, Deborah L},
-journal = {Structural Equation Modeling},
-volume = {8},
-number = {3},
-pages = {430--457},
-year = {2001},
-publisher = {Taylor \& Francis}
 }
 
 @article{fessantMidenet:2002,
@@ -387,29 +321,6 @@ pages = {259--275},
 doi={10.1023/A:1008334909089}
 }
 
-@article{langLittle:2018,
-title = {Principled missing data treatments},
-author = {Lang, Kyle M and Little, Todd D},
-journal = {Prevention Science},
-volume = {19},
-number = {3},
-pages = {284--294},
-year = {2018},
-publisher = {Springer}
-}
-
-@article{langWu:2017,
-author = {Kyle M. Lang and Wei Wu},
-title = {A Comparison of Methods for Creating Multiple Imputations of Nominal Variables},
-journal = {Multivariate Behavioral Research},
-volume = {52},
-number = {3},
-pages = {290-304},
-year = {2017},
-publisher = {Routledge},
-doi = {10.1080/00273171.2017.1289360}
-}
-
 @article{little:1988,
 title = {Missing-data adjustments in large surveys},
 author = {Little, Roderick J. A.},
@@ -490,14 +401,6 @@ year = {1996},
 pages = {385--401}
 }
 
-@inproceedings{orchardWoodbury:1972,
-title = {A missing information principle: {Theory} and applications},
-author = {Orchard, Terence and Woodbury, Max A},
-booktitle = {Proceedings of the Sixth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Theory of Statistics},
-year = {1972},
-organization = {The Regents of the University of California}
-}
-
 @article{piela:2002,
 author = {Piela, P.},
 title = {Introduction to Self-Organizing Maps Modelling for Imputation---Techniques \& Technology},
@@ -549,27 +452,6 @@ pages = {1349--1362},
 doi = {10.1007/s00521-011-0574-x}
 }
 
-@article{rubin:1976,
-title = {Inference and missing data},
-author = {Rubin, Donald B},
-journal = {Biometrika},
-volume = {63},
-number = {3},
-pages = {581--592},
-year = {1976},
-publisher = {Oxford University Press}
-}
-
-@inproceedings{rubin:1978,
-title = {Multiple imputations in sample surveys -- {A} phenomenological {Bayesian} approach to nonresponse},
-author = {Rubin, Donald B},
-booktitle = {Proceedings of the survey research methods section of the {American Statistical Association}},
-volume = {1},
-pages = {20--34},
-year = {1978},
-organization = {American Statistical Association}
-}
-
 @article{rubin:1986,
 title = {Statistical matching using file concatenation with adjusted weights and multiple imputations},
 author = {Rubin, Donald B.},
@@ -608,17 +490,6 @@ number = {2},
 pages = {205--212},
 year = {1992},
 doi = {10.1088/0954-898X/3/2/008}
-}
-
-@article{savaleiRhemtulla:2012,
-title = {On obtaining estimates of the fraction of missing information from full information maximum likelihood},
-author = {Savalei, Victoria and Rhemtulla, Mijke},
-journal = {Structural Equation Modeling: A Multidisciplinary Journal},
-volume = {19},
-number = {3},
-pages = {477--494},
-year = {2012},
-publisher = {Taylor \& Francis}
 }
 
 @article{schaferGraham:2002,
@@ -663,16 +534,6 @@ number = {12},
 year = {2008},
 pages = {2361--2370},
 doi = {10.1016/j.jss.2008.05.008}
-}
-
-@article{sterneEtAl:2009,
-title = {Multiple imputation for missing data in epidemiological and clinical research: {Potential} and pitfalls},
-author = {Sterne, Jonathan AC and White, Ian R and Carlin, John B and Spratt, Michael and Royston, Patrick and Kenward, Michael G and Wood, Angela M and Carpenter, James R},
-journal = {BMJ},
-volume = {338},
-pages = {b2393},
-year = {2009},
-publisher = {British Medical Journal Publishing Group}
 }
 
 @article{tannerWong:1987,
@@ -738,17 +599,6 @@ number = {4},
 year = {2006},
 pages = {926--949},
 doi = {10.1016/j.csda.2004.11.009}
-}
-
-@article{whiteEtAl:2011,
-title = {Multiple imputation using chained equations: {Issues} and guidance for practice},
-author = {White, Ian R and Royston, Patrick and Wood, Angela M},
-journal = {Statistics in Medicine},
-volume = {30},
-number = {4},
-pages = {377--399},
-year = {2011},
-publisher = {Wiley Online Library}
 }
 
 @article{vanBuurenEtAl:2006,
