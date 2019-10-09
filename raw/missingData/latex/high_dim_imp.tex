@@ -1,0 +1,119 @@
+%%% Title:    High-Dimensional Imputation Reading List
+%%% Author:   Kyle M. Lang
+%%% Created:  2019-10-09
+%%% Modified: 2019-10-09
+
+\documentclass[12pt]{article}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage[natbibapa]{apacite}
+\usepackage{multibib}
+\usepackage[libertine]{newtxmath}
+\usepackage{hyperref}
+\usepackage{datetime2}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
+
+\newcites{si, mi, ml}{Single Imputation, Multiple Imputation}
+
+% Set the title and author info
+\title{Missing Data Analysis\\ \Large High-Dimensional Imputation}
+\author{Compiled by Kyle M. Lang}
+
+\raggedright
+
+\begin{document}
+
+\maketitle
+
+The sources listed below represent an overview of the work on high-dimensional
+missing data imputation. This list is certainly not exhaustive, but it should
+provide a good starting point for readers interested in learning about the
+current state-of-the-art in missing data imputation for high-dimensional
+problems.
+
+%%??
+jerezEtAl:2010
+liaoEtAl:2014
+
+%% Overviews:
+garcia-laencinaEtAl:2010
+junninenEtAl:2004
+drechslerReiter:2011
+lakshminarayanEtAl:1999
+saar-tsechanskyProvost:2007
+
+%% Trees:
+borgoniBerrington:2013
+burgetteReiter:2010
+conversanoSiciliano:2009
+d'ambrosioEtAl:2012
+iacusPorro:2007
+nanniEtAl:2012
+reiter:2005
+wallaceEtAl:2010
+
+%% KNN:
+deAndradeSilvaHruschka:2013
+garcia-laencinaEtAl:2009
+wasitoMirkin:2005
+wasitoMirkin:2006
+zhang:2012
+
+%% SOM:
+fessantMidenet:2002
+kangYusof:2012
+piela:2002
+
+%% ANN:
+garcia-laencinaEtAl:2013
+gheyasSmith:2010
+guptaLam:1996
+luengoEtAl:2010
+nordbotten:1995
+nordbotten:1996
+rey-del-castilloCardenosa:2012
+silva-ramirezEtAl:2011
+yoonLee:1999
+
+%% Microarrays:
+kimEtAl:2005
+troyanskayaEtAl:2001
+
+%% SVM:
+wangEtAl:2006
+
+%% MI:
+zhaoLong:2016
+dengEtAl:2016
+heBelin:2014
+
+
+\nocitesi{
+ 
+}
+\nocitemi{
+ 
+}
+\nociteml{
+ 
+}
+
+\bibliographystylesi{apacite}
+\bibliographyintro{../../bibtex/missingData/papers.bib}
+
+\bibliographystylemi{apacite}
+\bibliographymi{../../bibtex/missingData/papers.bib}
+
+\bibliographystyleml{apacite}
+\bibliographyml{../../bibtex/missingData/papers.bib}
+
+\end{document}
