@@ -101,17 +101,30 @@ author={Schafer, J. L.},
 volume={72},
 year={1997},
 publisher={Chapman \& Hall/{CRC}},
-address = {Boca Raton, FL}
+address = {Boca Raton, FL},
 annote = 
 	{
-	\begin{itemzie}
-		\item Chapter 2 -  The chapter discusses at length the assumption of ignorability 
-			of the missing data mechanism and its implications 
-			for the missing data handling procedures. We talk about ignorable 
-			missingness when both the probability model for the missingness does not
+	\begin{itemize}
+		\item Chapter 2 discusses at length the assumption of ignorability 
+			of the missing-data mechanism and its implications 
+			for missing-data handling procedures. In particular, ignorability
+			of the missingness is clearly defined as the condition that holds when 
+			both the probability model for the missingness does not
 			depend on the missing part of the dataset (\textit{MAR}), and the model parameters are
 			\textit{distinct} from the missing data model parameters (i.e. knowing 
-			one will provide little or no information on the other)
+			one will provide little or no information on the other).
+
+		\item Chapter 3 reviews two fundamental approaches to incomplete data problems: 
+			the Expectation Maximization (EM) and the data augmentation algorithm.
+			To grasp all the technical details of EM, one could accompany this chapter 
+			to Dempster \textit{et al} 1977, the article that originally introduced it
+			(both materials require a solid statistical background). The discussion of
+			the data augmentation algorithm is exhaustive, presenting the higher-level
+			conceptual reasoning behind it, its application to missing-data problems,
+			and mathematically explicit examples. However, an interested reader might
+			benefit from the less abstract description of the I- and P-steps such as
+			that presented in Enders (2010, ch. 7).
+
 	\end{itemize}
 	}
 }
