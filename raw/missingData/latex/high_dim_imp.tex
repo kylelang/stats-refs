@@ -1,7 +1,7 @@
 %%% Title:    High-Dimensional Imputation Reading List
 %%% Author:   Kyle M. Lang
 %%% Created:  2019-10-09
-%%% Modified: 2019-10-09
+%%% Modified: 2019-10-10
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -22,7 +22,13 @@
 
 \geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
 
-\newcites{si, mi, ml}{Single Imputation, Multiple Imputation}
+\newcites{comp,tree,knn,ann,mi}{%
+  Overviews/Comparisons,%
+  Single Imputation using Classification/Regression\ Trees,%
+  Single Imputation using K-Nearest\ Neighbors,%
+  Single Imputation using Artificial\ Neural Networks,%
+  Multiple\ Imputation%
+}
 
 % Set the title and author info
 \title{Missing Data Analysis\\ \Large High-Dimensional Imputation}
@@ -35,85 +41,80 @@
 \maketitle
 
 The sources listed below represent an overview of the work on high-dimensional
-missing data imputation. This list is certainly not exhaustive, but it should
-provide a good starting point for readers interested in learning about the
-current state-of-the-art in missing data imputation for high-dimensional
-problems.
+missing data imputation. This list is certainly not exhaustive---and may not be
+especially representative---but it should provide a good starting point for
+readers interested in learning about the current state-of-the-art in missing
+data imputation for high-dimensional problems.\\
+\vspace{12pt}
+Although most of these sources discuss/evaluate several different imputation
+methods, I have attempted to classify each paper by its primary focus.
 
-%%??
-jerezEtAl:2010
-liaoEtAl:2014
-
-%% Overviews:
-garcia-laencinaEtAl:2010
-junninenEtAl:2004
-drechslerReiter:2011
-lakshminarayanEtAl:1999
-saar-tsechanskyProvost:2007
-
-%% Trees:
-borgoniBerrington:2013
-burgetteReiter:2010
-conversanoSiciliano:2009
-d'ambrosioEtAl:2012
-iacusPorro:2007
-nanniEtAl:2012
-reiter:2005
-wallaceEtAl:2010
-
-%% KNN:
-deAndradeSilvaHruschka:2013
-garcia-laencinaEtAl:2009
-wasitoMirkin:2005
-wasitoMirkin:2006
-zhang:2012
-
-%% SOM:
-fessantMidenet:2002
-kangYusof:2012
-piela:2002
-
-%% ANN:
-garcia-laencinaEtAl:2013
-gheyasSmith:2010
-guptaLam:1996
-luengoEtAl:2010
-nordbotten:1995
-nordbotten:1996
-rey-del-castilloCardenosa:2012
-silva-ramirezEtAl:2011
-yoonLee:1999
-
-%% Microarrays:
-kimEtAl:2005
-troyanskayaEtAl:2001
-
-%% SVM:
-wangEtAl:2006
-
-%% MI:
-zhaoLong:2016
-dengEtAl:2016
-heBelin:2014
-
-
-\nocitesi{
- 
+\nocitecomp{
+  garcia-laencinaEtAl:2010,
+  junninenEtAl:2004,
+  drechslerReiter:2011,
+  lakshminarayanEtAl:1999,
+  saar-tsechanskyProvost:2007%
 }
+
+\nocitetree{
+  borgoniBerrington:2013,
+  conversanoSiciliano:2009,
+  d'ambrosioEtAl:2012,
+  iacusPorro:2007,
+  nanniEtAl:2012%
+}
+
+\nociteknn{
+  deAndradeSilvaHruschka:2013,
+  garcia-laencinaEtAl:2009,
+  wasitoMirkin:2005,
+  wasitoMirkin:2006,
+  zhang:2012,
+  kimEtAl:2005,
+  troyanskayaEtAl:2001%
+}
+
+\nociteann{
+  garcia-laencinaEtAl:2013,
+  gheyasSmith:2010,
+  guptaLam:1996,
+  luengoEtAl:2010,
+  nordbotten:1995,
+  nordbotten:1996,
+  rey-del-castilloCardenosa:2012,
+  silva-ramirezEtAl:2011,
+  yoonLee:1999%
+}
+
 \nocitemi{
- 
-}
-\nociteml{
- 
+  zhaoLong:2016,
+  dengEtAl:2016,
+  heBelin:2014,
+  songBelin:2004,
+  wallaceEtAl:2010,
+  reiter:2005,
+  burgetteReiter:2010%
 }
 
-\bibliographystylesi{apacite}
-\bibliographyintro{../../bibtex/missingData/papers.bib}
+\bibliographystylecomp{apacite}
+\urlstyle{same}
+\bibliographycomp{../bibtex/papers.bib}
+
+\bibliographystyletree{apacite}
+\urlstyle{same}
+\bibliographytree{../bibtex/papers.bib}
+
+\bibliographystyleknn{apacite}
+\urlstyle{same}
+\bibliographyknn{../bibtex/papers.bib}
+
+\bibliographystyleann{apacite}
+\urlstyle{same}
+\bibliographyann{../bibtex/papers.bib}
 
 \bibliographystylemi{apacite}
-\bibliographymi{../../bibtex/missingData/papers.bib}
-
-\bibliographystyleml{apacite}
-\bibliographyml{../../bibtex/missingData/papers.bib}
+\urlstyle{same}
+\bibliographymi{../bibtex/papers.bib}
 
 \end{document}
