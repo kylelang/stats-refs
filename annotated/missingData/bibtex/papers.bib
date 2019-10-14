@@ -861,7 +861,31 @@ volume = {17},
 number = {6},
 pages = {520--525},
 year = {2001},
-doi = {10.1093/bioinformatics/17.6.520}
+doi = {10.1093/bioinformatics/17.6.520},
+annote = 
+	{
+	In the context of DNA microarrey studies with missing data, the authors show the better performance of a 
+		k-nearest neighbour imputation method (KNNImpute), over an SVD-based regression imputation method
+		(SVDImpute), and mean and zero imputation. \\
+
+	The KNNImpute algorithm outperforms all the other methods granting (1) less deterioration in performance
+		with increasing percentage of missingness, (2) robustness to the type of data considered (time-series 
+		or not, noisy or not), (3) less sensitivity to the number of parameters used (the choice of \textit{k}, 
+		the number of nearest neighbours considered for KNNImpute and the number of most significant eigengenes
+		selected for SVDImpute). \\
+
+	The generalisability of these results is somewhat hindered by two methodological choices:
+	\begin{itemize}
+		\item the missing data mechanisms considered is MCAR;
+		\item the metric used to identify the better method is the Root Mean Squared error, 
+			a standardised difference between the true data points values and the imputed ones.
+			As many contributions have highlighted (see Rubin, 1996), the goal of missing data
+			handling procedures is not recovering the true missing values but granting the 
+			statistical validity of the analyses performed on a dataset afflicted by missing data.
+			Hence, a better performance in recovering the missing data points is not necessarily
+			the best criterion on which to based the comparison.
+	\end{itemize}
+	}
 }
 
 @article{wallaceEtAl:2010,
