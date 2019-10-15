@@ -449,7 +449,25 @@ volume = {21},
 number = {2},
 pages = {187--198},
 year = {2005},
-doi = {10.1093/bioinformatics/bth499}
+doi = {10.1093/bioinformatics/bth499},
+annote = 
+	{
+	The auhtors developed the Local Least Square imputation (LLSImputation) method by which similar 
+		k-neighbour genes are selected, then used to estimate a prediction model which is finally 
+		employed to predict the missing values. \\
+
+	The article compares LSSImputation with the KNNImputation and SVDimputation proposed by Troyanskaya 
+		\text{et al} (2001), and the Bayesian PCA proposed by Oba \textit{et al.} (2003). As the 
+		BPCA approach improves on the SVDImputation by incorporating Bayesian optimisation in a 
+		PC based method, LLSI improves on KNNI by combining the local similarity structure and 
+		the optimisation procedure of least squares. \\
+
+	Finally, the article directly confronts the issue of choosing the optimal number of k-nearest 
+		neighbours. In absence of clear theory, the authors propose to empirically identify on 
+		a case-by-case basis the value of \textit{k} by repeatedly predicting some artificially 
+		imposed missing values and selecting the one that best recover the known fabricated 
+		missing values.
+	}
 }
 
 @article{kimEtAl:2004,
@@ -587,6 +605,22 @@ number = {4},
 year = {1996},
 pages = {385--401},
 url = {http://hdl.handle.net/11250/178156}
+}
+
+@article{oba2003bayesian,
+  title={A Bayesian missing value estimation method for gene expression profile data},
+  author={Oba, Shigeyuki and Sato, Masa-aki and Takemasa, Ichiro and Monden, Morito and Matsubara, Ken-ichi and Ishii, Shin},
+  journal={Bioinformatics},
+  volume={19},
+  number={16},
+  pages={2088--2096},
+  year={2003},
+  publisher={Oxford University Press},
+  annote = 
+  	{
+	The authors implemented a Bayesian Principle Component Regression apporach that 
+	performs better than KNNImpute and SVDImpute proposed by Troyanskaya2001.
+  	}
 }
 
 @inproceedings{orchardWoodbury:1972,
@@ -889,8 +923,8 @@ annote =
 			As many contributions have highlighted (see Rubin, 1996), the goal of missing data
 			handling procedures is not recovering the true missing values but granting the 
 			statistical validity of the analyses performed on a dataset afflicted by missing data.
-			Hence, a better performance in recovering the missing data points is not necessarily
-			the best criterion on which to based the comparison.
+			It is also true that such arguments usually apply in the context of multiple and not 
+			single imputation. 
 	\end{itemize}
 	}
 }
@@ -1031,7 +1065,8 @@ volume = {39},
 number = {1},
 pages = {265--291},
 year = {2009},
-annote = {
+annote = 
+	{
 	Transformed variables such as squared and interaction terms need special attention
 		when Multiple Imputation is performed. This article compares two main methods
 		to impute them: the \textit{transform then impute} and the \textit{impute then transform} 
