@@ -281,7 +281,25 @@ volume = {72},
 number = {7--9},
 year = {2009},
 pages = {1483--1493},
-doi = {10.1016/j.neucom.2008.11.026}
+doi = {10.1016/j.neucom.2008.11.026},
+annote =
+	{
+	The authors introduce an improved version of the KNNImpute algorithm proposed by Troyanskaya 
+		\textit{et al.} 2001. Their proposed strategy is called MI-KNNImpute, a somewhat confusing
+		label: the ``MI'' portion does not refer to ``multiple imputation'' but to the concept of
+		Mutual Information (i.e. the reduction of the uncertainty of a variable when another one is
+		known). \\
+	
+	The authors show with different incomplete datasets that the performance of the classification task, performed 
+		by a KNN algorithm that uses a distance measure of Euclidian form and one that uses MI, is 
+		improved by first imputing the datasets with the MI-KNNImpute algorithm compared to the standard 
+		KNNImpute. \\
+
+	The improved performance is achieved by including some information regarding the classification task
+		in the imputation phase, through the use of MI as a measure of distance between the target 
+		class variable and the other input attributes. The use of MI in the algorithm effectively 
+		weights the importance of each attribute for the imputation of the target class variable.
+	}
 }
 
 @article{garcia-laencinaEtAl:2010,
