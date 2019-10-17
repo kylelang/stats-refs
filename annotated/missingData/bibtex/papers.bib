@@ -977,7 +977,20 @@ volume = {169},
 number = {1--2},
 year = {2005},
 pages = {1--25},
-doi = {10.1016/j.ins.2004.02.014}
+doi = {10.1016/j.ins.2004.02.014},
+annote = 
+	{
+	The authors introduce the INImpute approach, an algorithm that combines an iterative SVD-based 
+		least-square imputation with a nearest neighbour approach. Missing values are imputed 
+		first globally (i.e. considering the entire dataset) through an Iterative Least Square 
+		algorithm (an SVD/PCR-based imputation method). Then, a kNN algorithm is used to select 
+		k-nearest-neighbours to an instance that had a missing value for a particular variable, 
+		and replaces the (globally) imputed value with one found with a PCR-based run only among the
+		nearest-neighbours. \\
+
+	The theoretical properties of this approach are not discussed but the authors do show the superiority
+		of INImpute to regular kNN and other ILS approaches in a variety of scenarios.
+	}
 }
 
 @article{wasitoMirkin:2006,
@@ -1125,7 +1138,18 @@ volume = {85},
 number = {11},
 year = {2012},
 pages = {2541--2552},
-doi = {10.1016/j.jss.2012.05.073}
+doi = {10.1016/j.jss.2012.05.073},
+annote = 
+	{
+	The author introduces the Gray k-Nearest-Neighbour (GkNN) algorithm as an improvement to the traditional 
+		kNNImpute algorithm (see Troyanskaya \textit{et al.} 2001). This new version uses a Gray Relation
+		Grade measure of similarity, from Gray Relational Analysis, which easily 
+		accommodates for both numerical and categorical input variables. Furthermore, the GkNN is an 
+		iterative algorithm rooted in the EM framework, and the author claims that such feature makes the
+		algorithm able to account for the uncertainty related to the imputation procedure. Finally, it 
+		uses all the information included in the dataset by including in the imputation of an instance 
+		\text{i}, the observed and imputed values of other instances that have missing values.
+	}
 }
 
 @article{zhaoLong:2016,
