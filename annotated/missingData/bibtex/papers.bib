@@ -20,7 +20,12 @@ journal = {Journal of the American Statistical Association},
 volume = {52},
 number = {278},
 pages = {200--203},
-year = {1957}
+year = {1957},
+annote = 
+	{
+	This article provides a concise mathematical workout of Maximum Likelihood estiamtion of multivariate
+		normal models with a monotone missing data pattern (from bivaraite to any-variate generalization).
+	}
 }
 
 @article{andridgeLittle:2010,
@@ -1182,9 +1187,13 @@ annote =
 	The author introduces the Gray k-Nearest-Neighbour (GkNN) algorithm as an improvement to the traditional 
 		kNNImpute algorithm (see Troyanskaya \textit{et al.} 2001). This new version uses a Gray Relation
 		Grade measure of similarity, from Gray Relational Analysis, which easily 
-		accommodates for both numerical and categorical input variables. Furthermore, the GkNN is an 
-		iterative algorithm rooted in the EM framework, and the author claims that such feature makes the
-		algorithm able to account for the uncertainty related to the imputation procedure. Finally, it 
+		accommodates for both numerical and categorical input variables. \\
+
+	Furthermore, GkNN is an iterative algorithm rooted in the EM framework, and the author claims that such feature makes the
+		algorithm able to account for the uncertainty related to the imputation procedure. However, it is not explicit how
+		this algorithm takes into account the additional uncertainty regarding parameters estimates
+
+	Finally, the GkNN algorithm
 		uses all the information included in the dataset by including in the imputation of an instance 
 		\text{i}, the observed and imputed values of other instances that have missing values.
 	}
