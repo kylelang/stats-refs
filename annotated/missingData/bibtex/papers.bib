@@ -1,7 +1,7 @@
 %%% Title:    Missing Data Journal Articles
 %%% Author:   Kyle M. Lang
 %%% Created:  2019-09-13
-%%% Modified: 2019-10-10
+%%% Modified: 2019-10-21
 
 @article{allison:1987,
 title = {Estimation of linear models with incomplete data},
@@ -150,6 +150,15 @@ pages = {227--258},
 doi = {10.1007/s00357-012-9108-1}
 }
 
+@inproceedings{deAndradeSilvaHruschka:2009,
+title={EACImpute: an evolutionary algorithm for clustering-based imputation},
+author={de Andrade Silva, Jonathan and Hruschka, Eduardo R},
+booktitle={2009 Ninth International Conference on Intelligent Systems Design and Applications},
+pages={1400--1406},
+year={2009},
+organization={IEEE}
+}
+
 @article{deAndradeSilvaHruschka:2013,
 author = {de Andrade Silva, Jonathan and Hruschka, Eduardo Raul},
 title = {An experimental study on the use of nearest neighbor-based imputation algorithms for classification tasks},
@@ -157,7 +166,23 @@ journal = {Data \& Knowledge Engineering},
 volume = {84},
 year = {2013},
 pages = {47--58},
-doi = {10.1016/j.datak.2012.12.006}
+doi = {10.1016/j.datak.2012.12.006},
+annote = 
+	{
+	The article compares 5 popular Nearest-Neighbour algorithms based on both their prediction accuracy and 
+		the classification bias. The results show that in a MCAR context, the Iterative KNNImpute algorithm proposed
+		by Bràs and Menezes (2007) outperforms all other methods, according to both the Normalised Root Mean Squared 
+		Error (NRMSE) and the Average Correct Classification Rate (ACCR) criterion. However, in a MAR scenario,
+		the KNNI proposed by Troyanskaya et al 2001, the Sequential KNNI proposed by Kim et al (2004), and the 
+		EACI proposed by de Andrade Silva and Hruschka (2009) perform best. \\
+
+	One of the clearest contribution of the article is showing that
+		better prediction accuracy does not necessarily imply a better modelling performance (i.e. an algorithm
+		might ``recover'' the missing values better, but another algorithm might provide a better estimation
+		of the relationship between attributes). This result motivates a departure from the exclusive use of
+		the Normalised Root Mean Squared Error measure of prediction accuracy as the criteria to evaluate an imputation
+		algorithm. It must be noted that this article is concerned exclusively with a classification task.
+	}
 }
 
 @article{dempsterEtAl:1977,
@@ -938,11 +963,10 @@ annote =
 		\item the missing data mechanisms considered is MCAR;
 		\item the metric used to identify the better method is the Root Mean Squared error, 
 			a standardised difference between the true data points values and the imputed ones.
-			As many contributions have highlighted (see Rubin, 1996), the goal of missing data
-			handling procedures is not recovering the true missing values but granting the 
-			statistical validity of the analyses performed on a dataset afflicted by missing data.
-			It is also true that such arguments usually apply in the context of multiple and not 
-			single imputation. 
+			As many contributions have highlighted (see Rubin, 1996; de Andrade Silva \textit{et al.}, 2013), the 
+			goal of missing data handling procedures is not necessarly recovering the true missing 
+			values but rather granting the statistical validity of the analyses performed on a 
+			dataset afflicted by missing data.
 	\end{itemize}
 	}
 }
@@ -982,11 +1006,11 @@ annote =
 	{
 	The authors introduce the INImpute approach, an algorithm that combines an iterative SVD-based 
 		least-square imputation with a nearest neighbour approach. Missing values are imputed 
-		first globally (i.e. considering the entire dataset) through an Iterative Least Square 
-		algorithm (an SVD/PCR-based imputation method). Then, a kNN algorithm is used to select 
-		k-nearest-neighbours to an instance that had a missing value for a particular variable, 
-		and replaces the (globally) imputed value with one found with a PCR-based run only among the
-		nearest-neighbours. \\
+		first globally (i.e. considering the entire dataset) through an Iterative Majorization Least Square 
+		algorithm (an SVD/PCR-based imputation method with 4 principal components, p=4). Then, a kNN algorithm 
+		is used to select k-nearest-neighbours to an instance that had a missing value for a particular variable, 
+		and replaces the previously (globally) imputed value with a new one found with anoter IMLS run only among the
+		nearest-neighbours (and with p=1). \\
 
 	The theoretical properties of this approach are not discussed but the authors do show the superiority
 		of INImpute to regular kNN and other ILS approaches in a variety of scenarios.
@@ -1001,7 +1025,21 @@ volume = {50},
 number = {4},
 year = {2006},
 pages = {926--949},
-doi = {10.1016/j.csda.2004.11.009}
+doi = {10.1016/j.csda.2004.11.009},
+annote = 
+	{
+	The authors extend the comparison of the different least-squares imputation techniques performed by Wasito 
+		and Mirkin (2005) to accommodate for different missing data mechanisms (MCAR, MNAR and a merged data 
+		missingness). \\
+
+	The results mainly show that all versions of Nearest-Neighbour-based least-squares imputations presented
+		outperform the global versions. Furthermore, the global-local INI (IMLS-NN-IMLS) approach wins 
+		in almost all contexts except when only the local version (the NN-IMLS) wins.
+
+	The article also includes a detailed description of a data generating process according to the Neural Network 
+		NetLab framework, and of the missing data patterns generation. Hence, it is a good reference for anyone
+		planning a simulation study to test imputation methods.
+	}
 }
 
 @article{whiteEtAl:2011,
