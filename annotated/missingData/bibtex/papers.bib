@@ -23,8 +23,8 @@ pages = {200--203},
 year = {1957},
 annote = 
 	{
-	This article provides a concise mathematical workout of Maximum Likelihood estiamtion of multivariate
-		normal models with a monotone missing data pattern (from bivaraite to any-variate generalization).
+	This article provides a concise mathematical workout of Maximum Likelihood estimation of multivariate
+		normal models with a monotone missing data pattern (from bivariate to any-variate generalisation).
 	}
 }
 
@@ -141,7 +141,23 @@ volume = {26},
 number = {3},
 year = {2009},
 pages = {361--379},
-doi = {10.1007/s00357-009-9038-8}
+doi = {10.1007/s00357-009-9038-8},
+annote = 
+	{
+	The authors introduce the Incremental NonParametric Imputation (INPI) algorithm for imputing large datasets 
+		with missing values on multiple categorical and/or continuous variables. This approach reorganises the 
+		data according to a lexicographic order (arranging the columns and rows of a data matrix so as to concentrate
+		the missing values in a corner), grows a decision tree with a FAST algorithm (selecting first the best
+		splitting predictor and then the best splitting cut off value), imputes a missing value that minimises
+		a given error/decision rule, and augments the complete data before repeating the process for all the 
+		other missing values. \\
+
+	The INPI algorithm exploits all of the advantages of decision tree methods (i.e. nonparametric nature, flexibility
+		to variable types) and grants an effective imputation method for large datasets. Another advantage of the 
+		is that the algorithm can be easily extended to include imputation model uncertainty (Multiple 
+		Imputation). However, it must be noticed that this algorithm assumes a MAR mechanisms and that there 
+		is at least one completely observed variable in the original dataset.
+	}
 }
 
 @article{d'ambrosioEtAl:2012,
@@ -152,7 +168,27 @@ volume = {29},
 number = {2},
 year = {2012},
 pages = {227--258},
-doi = {10.1007/s00357-012-9108-1}
+doi = {10.1007/s00357-012-9108-1},
+annote = 
+	{
+	The imputation algorithm proposed in this article improves on the INPI algorithm proposed by Conversano
+		and Siciliano (2009) in two ways: by incrementally imputing one variable at the time, it reduces 
+		the computational effort compared to the imputation of single missing data points one at the time;
+		by using the ensemble learning classifier AdaBoost, instead of single decision tree, the new 
+		algorithm is more accurate, in terms of prediction error. \\
+
+	This article also integrates this imputation approach in a ``data fusion'' problem. This could be 
+		interesting for imputation problems with datasets gathered according to planned missing data 
+		designs. \\
+
+	The article interestingly includes the MICE approach as one of the imputation methods compared. However, 
+		it does not provide a valid measure of comparison between MICE and BINPI. The authors stress how
+		the performance of a BINPI algorithm should be evaluated based on its ability to recover the 
+		missing values (according to the Statistical Learning Theory framework). However, MICE is an imputation
+		strategy grounded in the stochastic framework proposed by Rubin. Hence, MICE should be 
+		evaluated not in terms of the ability to recover missing values (prediction error), but in terms of
+		how statistically valid the analysis that it allows to perform are.
+	}
 }
 
 @inproceedings{deAndradeSilvaHruschka:2009,
