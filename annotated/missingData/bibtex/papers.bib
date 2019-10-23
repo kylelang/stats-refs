@@ -74,7 +74,25 @@ volume = {47},
 number = {4},
 year = {2013},
 pages = {1991--2008},
-doi = {10.1007/s11135-011-9638-3}
+doi = {10.1007/s11135-011-9638-3},
+annote = 
+	{
+	The authors integrate a sequential (one-variable-at-the-time + data augmentation) tree-based imputation
+		algorithm and non-parametric bootstrap. Specifically, given a set of fully observed inputs and 
+		a set of target variables with missing values, their approach grows a tree on a complete subset 
+		of the instances for each target variable sequentially (starting with the target variable with 
+		fewest missing cases, uses the imputed values to augment the original data, and improve imputation 
+		of variables with more missing values), and iterates this procedure until some criteria is reached. 
+		To account for the added uncertainty due to imputation, the authors apply this method to a large
+		number of bootstrap samples from the original dataset. \\
+
+	Considering only categorical variables, the authors compare mode, sequential regressions, a non-iterative
+		tree-based imputations to their bootstrap tree-based imputation algorithm. Most notably, the results 
+		of the simulation study point out that non-iterative regression trees are worst than simple
+		mode imputation in terms of estimation accuracy (bias and efficiency of a true model parameters
+		estimates), and that their bootstrap version of an imputing decision tree compensates well for the
+		extra variability added by the imputation process.
+	}
 }
 
 @article{brasMenezes:2007,
@@ -1020,7 +1038,21 @@ volume = {29},
 number = {29},
 year = {2010},
 pages = {3004--3016},
-doi = {10.1002/sim.4079}
+doi = {10.1002/sim.4079},
+annote = 
+	{
+	The authors propose a multiple imputation decision tree method that includes uncertainty regarding
+		the imputed values. This is achieved by slightly modifying the single imputation tree-based algorithm 
+		proposed by Conversano and Siciliano (2003): the tree is grown M times, and, after the first 
+		iteration, the imputed variables are considered as possible candidates for the split as well 
+		as the complete ones; once the best splitting variable and values are chosen, the algorithm 
+		classifies the cases with missing values on the target variable, based on their observed 
+		values on the other features, in a given node, and imputes that node mean value of the target feature. 
+		Each time a value is imputed with the node's mean, a random error is added to it. As a result 
+		each missing data point is filled with M different values, allowing the algorithm account for 
+		uncertainty of the imputed value.
+	}
+
 }
 
 @article{wangEtAl:2006,
@@ -1227,7 +1259,7 @@ annote =
 
 	Furthermore, GkNN is an iterative algorithm rooted in the EM framework, and the author claims that such feature makes the
 		algorithm able to account for the uncertainty related to the imputation procedure. However, it is not explicit how
-		this algorithm takes into account the additional uncertainty regarding parameters estimates
+		this algorithm takes into account the additional uncertainty regarding parameters estimates. \\
 
 	Finally, the GkNN algorithm
 		uses all the information included in the dataset by including in the imputation of an instance 
