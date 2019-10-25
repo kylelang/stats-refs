@@ -113,7 +113,19 @@ volume = {172},
 number = {9},
 year = {2010},
 pages = {1070--1076},
-doi = {10.1093/aje/kwq260}
+doi = {10.1093/aje/kwq260},
+annote = 
+	{
+	The authors propose a multiple imputation via sequential decision trees to deal with large datasets with
+		missing data on many predictors. The approach is rooted in the MICE algorithm. The main point
+		of departure is the way predictive distribution draws are done. For each target variable with missing values
+		a tree is grown on the remaining complete (augmented) dataset. The imputations are done by locating
+		each case with a missing value on the current target variable in a leaf of such a tree and attributing 
+		a randomly sampled target variable value among the observed ones in that leaf. \\
+
+	In the simulation setup, the approach proposed works fine in terms of providing low bias of the parameter estimates
+		of the data generating model fitted to the imputed data. However, the coverage rates are alarmingly low.
+	}
 }
 
 @article{collinsEtAl:2001,
@@ -289,7 +301,22 @@ volume = {55},
 number = {12},
 year = {2011},
 pages = {3232--3243},
-doi = {10.1016/j.csda.2011.06.006}
+doi = {10.1016/j.csda.2011.06.006},
+annote =
+	{
+	The authors compare four Machine Learning methods to create synthetic datasets: (sequential/repeated) CART, 
+		implemented in a similar fashion to Burgette and Reiter (2010); CART applied to bootstrapped subsamples 
+		of the original dataset (random forests and bagging); and Support Vector Machines. These prediction 
+		methods are expected to generate synthetic datasets that preserve the original complex data structure, 
+		and hence grant statistical validity of any secondary analyses carried out on them. \\
+
+	Generating a synthetic dataset can be thought of as imputing a dataset with missing data. The issue of granting 
+		statistical validity of the analyses performed on a partially synthetic dataset is the same as that 
+		of obtaining statistically valid analyses on an imputed dataset. Therefore, these findings are directly
+		applicable to the high-dimensional missing data handling problem. The study shows sequential/MI CART and 
+		SVM synthetic dataset generation (imputation) procedures outperform both random forests and bagging 
+		approaches.
+	}
 }
 
 @article{enders:2001-mlr,
@@ -1294,7 +1321,19 @@ number = {5},
 pages = {2021--2035},
 year = {2016},
 publisher = {SAGE Publications Sage UK: London, England},
-doi = {10.1177/0962280213511027}
+doi = {10.1177/0962280213511027},
+annote = 
+	{
+	The authors discuss the used of chained equations regularised regression imputation that enables missing data handling 
+		within the Multiple Imputation framework with high-dimensional data ($p > n$). Three main approaches are proposed:
+		a direct use of regularised regression on multiple bootstrapped datasets (DURR), an inderect use of it, and finally
+		a bayesian lasso approach. \\
+
+	The method BLasso method seems to outperform the other ones. Furthermore, it can easily be extended to general missing 
+		data patters (the study only shows results for univariate missing data), while the other methods do not share such
+		feature. However, the BLasso approach becomes computationally extremely intensive (even infeasible) when many 
+		variables are afflicted by missing values.
+	}
 }
 
 @article{zhuKosorok:2012,
