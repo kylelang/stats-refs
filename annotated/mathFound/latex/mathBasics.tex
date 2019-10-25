@@ -1,7 +1,7 @@
 %%% Title:    Mathematical Foundation Books
 %%% Author:   Edoardo Costantini
 %%% Created:  2019-10-04
-%%% Modified: 2019-10-22
+%%% Modified: 2019-10-23
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -22,9 +22,10 @@
 
 \geometry{verbose, tmargin = 1in, bmargin = 1in, lmargin = 1in, rmargin = 1in}
 
-\newcites{introb,distrp}{%
+\newcites{introb,distrp,bayp}{%
   Introductory\ Books,%
-  Distributions\ Papers%
+  Probability Distributions\ Papers,%
+  Bayesian\ Papers%
  }
 
 % Set the title and author info
@@ -43,14 +44,25 @@
 	conversano:2009%
 }
 \nocitedistrp{
-	arnold2001conditionally,
-	gelmanraghunthan:2001%	
+	arnold:2001,
+	gelmanraghunthan:2001,
+	dempster:1977%	
+}
+\nocitebayp{
+	gelman:1993,
+	kyung:2010%
 }
 
 \bibliographystyleintrob{apacann}
+\urlstyle{same}
 \bibliographyintrob{../bibtex/books.bib}
 
 \bibliographystyledistrp{apacann}
+\urlstyle{same}
 \bibliographydistrp{../bibtex/papers.bib}
+
+\bibliographystylebayp{apacann}
+\urlstyle{same}
+\bibliographybayp{../bibtex/papers.bib}
 
 \end{document}
