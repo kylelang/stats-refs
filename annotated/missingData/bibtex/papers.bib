@@ -1,7 +1,7 @@
 %%% Title:    Missing Data Journal Articles
 %%% Author:   Kyle M. Lang
 %%% Created:  2019-09-13
-%%% Modified: 2019-10-21
+%%% Modified: 2019-10-28
 
 @article{allison:1987,
 title = {Estimation of linear models with incomplete data},
@@ -290,7 +290,20 @@ volume = {6},
 pages = {21689},
 year = {2016},
 publisher = {Nature Publishing Group},
-doi = {10.1038/srep21689}
+doi = {10.1038/srep21689},
+annote = 
+	{
+	The authors carried out a comparison study similar to that of Zhao and Long (2013) in order to assess the efficiency
+		of regularised regression for multiple imputation of high-dimensional data. One key contribution is 
+		generalising the univariate missing case to multivariate missing patterns. However, the study considers 
+		at most three variables afflicted by missing values (at least in the simulation study). \\
+
+	The study shows a clear dominance of MICE-IURR (MICE with indirect use of regularised regression) in terms of bias
+		compared to all other viable methods. In terms of coverage rate, there is no clear winner. Notably, the Random
+		Forest MICE approach proposed by Shah et al 2014 does not live up to the promising findings of this previous
+		study (the unsatisfactory performance of MICE-RF is corroborated by Drechsler and Reiter, 2011). Finally,
+		the result shown for MICE-DURR are also in disagreement with what was found by Zhao and Long (2013).
+	}
 }
 
 @article{drechslerReiter:2011,
@@ -844,7 +857,27 @@ journal = {Journal of Official Statistics},
 volume = {21},
 number = {3},
 year = {2005},
-pages = {7--30}
+pages = {7--30},
+annote = 
+	{
+	The author proposes the use of CART to generate synthetic data sets (i.e. substituting sensitive observed
+		data points with multiply imputed values to avoid disclosure of information). For each of many
+		subsamples of the original dataset, the algorithm sequentially grows a tree for each of the k-th 
+		sensitive variables using all the other variables ($X, Y_{-k}$) as inputs, and then imputes the 
+		values to be replaces (the ``missing data points'') though bootstrap sampling of the $Y_k$ values
+		in the leaf where each observation falls. \\
+
+	The literature on using CART and other synthetic data generator methods is closely related to that of missing
+		data imputation. However, a few remarks are due. The first body of literature is concerned with
+		balancing between guarantying statistical validity of the secondary analyses and reducing the risk of
+		sensitive information disclosure, while missing data-handling literature is exclusively concerned
+		with the statistical validity issue. This is important because the different goal influences the tree 
+		pruning strategy. Furthermore, the concept of missing data mechanism is not relevant
+		for the synthetic data literature and replacement (missingness) is forced on either the entire variable
+		or just specific ranges of it (e.g. replace (impute) values of income which are greater then a 
+		threshold). The counterpart scenario in a missing data context is imputing a fully missing variable with
+		especially good initial guesses.
+	}
 }
 
 @article{rey-del-castilloCardenosa:2012,
@@ -985,6 +1018,17 @@ number = {2},
 year = {1995},
 pages = {73--77},
 doi = {10.1007/BF01421959}
+}
+
+@article{shah:2014,
+title = {Comparison of random forest and parametric imputation models for imputing missing data using MICE: a CALIBER study},
+author = {Shah, Anoop D and Bartlett, Jonathan W and Carpenter, James and Nicholas, Owen and Hemingway, Harry},
+journal = {American journal of epidemiology},
+volume = {179},
+number = {6},
+pages = {764--774},
+year = {2014},
+publisher = {Oxford University Press}
 }
 
 @article{silva-ramirezEtAl:2011,
