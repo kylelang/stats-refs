@@ -1,7 +1,7 @@
 %%% Title:    Missing Data Journal Articles
 %%% Author:   Kyle M. Lang
 %%% Created:  2019-09-13
-%%% Modified: 2019-10-28
+%%% Modified: 2019-10-29
 
 @article{allison:1987,
 title = {Estimation of linear models with incomplete data},
@@ -513,7 +513,12 @@ number = {13},
 pages = {2251--2262},
 year = {2014},
 publisher = {Wiley Online Library},
-doi = {10.1002/sim.6107}
+doi = {10.1002/sim.6107},
+annote = 
+	{
+	The authors propose a joint modelling imputation approach that accommodates for both continuous and binary variables
+		ith missing values.
+	}
 }
 
 @article {honakerKing:2010,
@@ -536,7 +541,8 @@ volume = {50},
 number = {3},
 pages = {285--299},
 year = {2015},
-publisher = {Taylor \& Francis}
+publisher = {Taylor \& Francis},
+doi = {10.1080/00273171.2014.999267}
 }
 
 @article{iacusPorro:2007,
@@ -1028,7 +1034,19 @@ volume = {179},
 number = {6},
 pages = {764--774},
 year = {2014},
-publisher = {Oxford University Press}
+publisher = {Oxford University Press},
+annote = 
+	{
+	The authors propose a modfied MICE apporach that uses a Random Forest to generate the conditional distribution 
+		from which the imputed values are drawn. The approach is meaningfully different from multiple imputations
+		obtained by multiple parallel runs of \textit{missForest}, the random forest imputation method proposed by 
+		Stekhoven and B{\"u}hlmann (2012) which results in a deterministic imputation, albeit weighted across 
+		different trees.
+
+	The results show good performances of the proposed MICE-Forest in terms of bias and efficiency. In particular,
+		the author's method mathced or outperformed the traditional parametric MICE and outperformed their proposed
+		MI-missForest approach.
+	}
 }
 
 @article{silva-ramirezEtAl:2011,
@@ -1051,7 +1069,19 @@ number = {18},
 pages = {2827--2843},
 year = {2004},
 publisher = {Wiley Online Library},
-doi = {10.1002/sim.1867}
+doi = {10.1002/sim.1867},
+annote = 
+	{
+	The authors propose a multiple imputation algorithm based on a common factor imputation model. The idea is
+		that through specifying a common factor model with uninformative priors on the factor loadings and the
+		other parameters, it is possible to predict (impute) the missing values by sampling from a conditional
+		distribution that takes into account as much information as possible from the data, without need to
+		estimate an excessive number of parameters.
+
+	The approach shows low bias and good coverage properties, however its implementation is restricted to a high-
+		dimensional multivariate normal data. Furthermore, this method requires that the true number of components
+		is known.
+	}
 }
 
 @article{songEtAl:2008,
@@ -1063,6 +1093,26 @@ number = {12},
 year = {2008},
 pages = {2361--2370},
 doi = {10.1016/j.jss.2008.05.008}
+}
+
+@article{stekhovenBuhlmann:2011,
+title={MissForest—non-parametric missing value imputation for mixed-type data},
+author={Stekhoven, Daniel J and B{\"u}hlmann, Peter},
+journal={Bioinformatics},
+volume={28},
+number={1},
+pages={112--118},
+year={2011},
+publisher={Oxford University Press},
+annote = 
+	{
+	The authors propose an imputation algorithm that exploits the advantages of random forests over traditional 
+		CARTs to improve the accuracy of the imputed missing values. Their imputation algorithm sequentially 
+		imputes variables $y_s$ with $s=1,...,p$ and $p$ number of variables afflicted by missingness, 
+		ordered by ascending percentages of missing values, by fitting a random forest to predict the observed 
+		part of $y_s$ with the corresponding observed $x$s, and imputing the missing part of $y_s$ with 
+		predicted values obtained by applying the trained random forest to the corresponding observed $x$s.
+	}
 }
 
 @article{sterneEtAl:2009,
@@ -1370,8 +1420,8 @@ annote =
 	{
 	The authors discuss the used of chained equations regularised regression imputation that enables missing data handling 
 		within the Multiple Imputation framework with high-dimensional data ($p > n$). Three main approaches are proposed:
-		a direct use of regularised regression on multiple bootstrapped datasets (DURR), an inderect use of it, and finally
-		a bayesian lasso approach. \\
+		a direct use of regularised regression on multiple bootstrapped datasets (DURR), an indirect use of it, and finally
+		a Bayesian lasso approach. \\
 
 	The method BLasso method seems to outperform the other ones. Furthermore, it can easily be extended to general missing 
 		data patters (the study only shows results for univariate missing data), while the other methods do not share such
