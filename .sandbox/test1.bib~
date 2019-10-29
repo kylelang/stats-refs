@@ -1,0 +1,14 @@
+%%% Title:    Missing Data Journal Articles
+%%% Author:   Kyle M. Lang
+%%% Created:  2019-09-13
+%%% Modified: 2019-10-29
+
+@article{allison:1987,
+title = {Estimation of linear models with incomplete data},
+author = {Allison, Paul D.},
+journal = {Sociological Methodology},
+volume = {17},
+number = {1},
+pages = {71--103},
+year = {1987}
+}
