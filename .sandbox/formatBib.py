@@ -1,28 +1,15 @@
-### Title:    Test Python Parsing/Modification of BibTex files
+### Title:    Format BibTex files
 ### Author:   Kyle M. Lang
-### Created:  2019-10-29
-### Modified: 2019-10-29
+### Created:  2019-10-30
+### Modified: 2019-10-30
+
+iFile = "test1.bib" # Input file name
+oFile = "out3.bib"  # Output file name
+order = 2           # How to order fields?
 
 import bibtexparser as btp
 from bibtexparser.bwriter import BibTexWriter
-
-order = 2
-
-## Read in the raw BibTex file:
-with open("test1.bib") as bib1: raw = btp.load(bib1)
-
-## Read in the annotations file:
-with open("test2.bib") as bib2: ann = btp.load(bib2)
-
-## Express entry lists as dictionaries:
-rawEnt = raw.entries_dict
-annEnt = ann.entries_dict
-
-## Update each BibTex entry with the appropriate annotation:
-for key in annEnt:
-    if key in rawEnt:
-        rawEnt[key].update(annEnt[key])
-
+    
 ## Modifying the writer's behavior:
 writer = BibTexWriter()
 writer.indent = "  "
@@ -66,7 +53,30 @@ else:
     raise Exception("Invalid value for 'order'")
 
 writer.display_order = do
+writer.contents = ["comments", "preambles", "strings", "entries"]
 
-## Write out the updated BibTex file:
-with open("out1.bib", "w") as out: btp.dump(raw, out, writer)
-    
+## Read in the raw BibTex file:
+with open(iFile, "r") as f0: tmp = btp.load(f0)
+
+print("Comments:")
+print(tmp.comments)
+
+print(len(tmp.comments))
+
+with open("out4.bib", "w") as f:
+    for com in tmp.comments: f.write(com)
+    f.write("\r\n\r\n") # use Windows-style eol characters to be consistent with bibtexparser
+    f.write("Hello world")
+        
+'''
+## Write out the BibTex file with appropriate formatting:
+with open(oFile, "w") as out: btp.dump(tmp, out, writer)
+
+class FormatBibTex(BibTexWriter):
+    def __init__(self, bibFile, order):
+        super().__init__()
+        with open(bibFile, "r") as inBib: _bib0 = btp.load(inBib)
+        _order = order
+
+    def 
+'''
