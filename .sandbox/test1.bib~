@@ -1,14 +1,48 @@
-%%% Title:    Missing Data Journal Articles
-%%% Author:   Kyle M. Lang
-%%% Created:  2019-09-13
-%%% Modified: 2019-10-29
+### Title:    Format BibTex files
+### Author:   Kyle M. Lang
+### Created:  2019-10-30
+### Modified: 2019-10-30
 
-@article{allison:1987,
-title = {Estimation of linear models with incomplete data},
-author = {Allison, Paul D.},
-journal = {Sociological Methodology},
-volume = {17},
-number = {1},
-pages = {71--103},
-year = {1987}
-}
+import sys
+import bibtexparser as btp
+from bibtexparser.bwriter import BibTexWriter
+
+def formatBibTex(iFile, oFile, order = None):
+    ## Instantiate a BibTexWriter object:
+    writer = BibTexWriter()
+
+    ## Modify the writer's behavior to format output:
+    writer.indent           = "  "
+    writer.order_entries_by = ("key", "author", "year")
+    writer.contents         = ["entries"]
+
+    ## How do we want to order the fields?
+    if order == None:
+        writer.display_order = ("key", "title", "author", "year")
+    else:
+        writer.display_order = order
+        
+    ## Read in the raw BibTex file:
+    with open(iFile, "r") as f0: tmp = btp.load(f0)
+
+    #print(tmp.comments)
+    
+    ## Write out a correctly formatted BibTex file:
+    with open(oFile, "w") as f1:
+        f1.write(tmp.comments[0])
+        f1.write("\n\n")
+        btp.dump(tmp, f1, writer)
+
+    return(0)
+
+args = sys.argv
+
+print(args)
+
+if len(args) > 2:
+    order = args[2]
+else:
+    order = None
+
+formatBibTex(iFile = args[0], oFile = args[1], order = order)
+

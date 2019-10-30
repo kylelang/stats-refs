@@ -1,7 +1,7 @@
-### Title:    Test Python Parsing/Modification of BibTex files
+### Title:    Format BibTex file
 ### Author:   Kyle M. Lang
 ### Created:  2019-10-29
-### Modified: 2019-10-29
+### Modified: 2019-10-30
 
 import sys
 import modBibFiles as mbf
@@ -10,5 +10,5 @@ import modBibFiles as mbf
 args = sys.argv
 
 ## Add annotations to BibTex file:
-mbf.extendBib(rawFile = args[1], extFile = args[2], outFile = args[3])
+mbf.formatBib(iFile = args[1], oFile = args[2])
 
