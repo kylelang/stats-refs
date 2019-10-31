@@ -39,7 +39,7 @@ cd $texPath
 t0=$(date +%T)
 
 ## Find the BibTex files used in the LaTeX doc:
-bibs=$(python ${binPath}findBib.py $texName.tex)
+bibs=$(python ${binPath}findBib.py $texName)
 
 ## Annotate the BibTex files:
 for bib in $bibs; do
@@ -49,7 +49,7 @@ for bib in $bibs; do
 done
 
 ## Compile the LaTeX file:
-pdflatex $texName.tex
+pdflatex $texName
 
 ## Find all the newly created auxiliary files:
 auxFiles=$(find * -newermt $t0 | grep aux)
@@ -58,8 +58,8 @@ auxFiles=$(find * -newermt $t0 | grep aux)
 for aux in $auxFiles; do bibtex $aux; done
 
 ## Do the final LaTeX compilations:
-pdflatex $texName.tex
-pdflatex $texName.tex
+pdflatex $texName
+pdflatex $texName
 
 ## Clean up: Move the final PDF file to the appropriate directory
 mv ${texName/.tex/.pdf} ../pdf

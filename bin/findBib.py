@@ -12,8 +12,7 @@ with open(args[1], "r") as f0: tex = f0.read()
     
 bibs = re.findall("\w+\\.bib", tex)
 
-with open("bibFiles.txt", "w") as f1:
-    for f in set(bibs):
-        f1.write(f)
-        f1.write("\n")
+for f in set(bibs): print(f)
+    
+        
 
