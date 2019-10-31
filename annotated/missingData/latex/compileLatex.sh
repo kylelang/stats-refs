@@ -9,6 +9,9 @@
 
 name=high_dim_imp
 
+## Find the BibTex files used:
+bibs=`python findBib.py $name`
+
 ## Record when we're starting:
 t0=`date +%T`
 
