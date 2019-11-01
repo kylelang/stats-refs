@@ -542,7 +542,31 @@ number = {3},
 pages = {285--299},
 year = {2015},
 publisher = {Taylor \& Francis},
-doi = {10.1080/00273171.2014.999267}
+doi = {10.1080/00273171.2014.999267},
+annote = 
+	{
+	The authors propose an ``all-inclusive'' strategy for auxiliary variables that uses PCA to 
+		reduce the number of predictors included in the imputation model, while preserving
+		as much as possible the variability of all the possible auxiliary variables in a
+		dataset. The study tries to establish whether this strategy is as beneficial as a 
+		standard inclusive strategy compared to no use of auxiliary variables. \\
+
+	In the authors linear MAR simulation set up, the PCA approach proposed showed no convergence
+		failures (i.e. all runs of the algorithm led to stable parameter values and SE, with 
+		no impossible values), negligible bias, the same efficiency (measured as Root Mean 
+		Squared Error in parameter estimates) as the inclusive strategy, and acceptable coverage.
+		As for the non linear set up the same performance was showed by the auxiliary-inclusive 
+		and the PCA approaches. In a real dataset example, the authors also find that the PCA 
+		strategy grants the least FMI (i.e. the lowest loss in efficiency of parameters estimates 
+		due to missing data). \\
+
+	The approach is promising but was evaluated only with very few predictors in the analysis model 
+		and 45 auxiliary variables. PCA inclusion of auxiliary variables in the imputation model 
+		needs to be tested on actually high dimensional scenario. The method has a few weaknesses:
+		the imputer must decide the number of PCs to choose; PCA can only be computed on a complete
+		dataset, hence some preliminary imputation needs to be done and the impact of such choices
+		on the PCs effectiveness was unexplored; PCA is in general sensitive to outliers.
+	}
 }
 
 @article{iacusPorro:2007,
@@ -1249,8 +1273,7 @@ annote =
 		in almost all contexts except when only the local version (the NN-IMLS) wins.
 
 	The article also includes a detailed description of a data generating process according to the Neural Network 
-		NetLab framework, and of the missing data patterns generation. Hence, it is a good reference for anyone
-		planning a simulation study to test imputation methods.
+		NetLab framework, and of the missing data patterns generation.
 	}
 }
 
