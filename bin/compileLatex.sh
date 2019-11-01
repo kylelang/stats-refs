@@ -3,7 +3,7 @@
 ### Title:    Compile LaTeX Files
 ### Author:   Kyle M. Lang
 ### Created:  2019-10-30
-### Modified: 2019-10-31
+### Modified: 2019-11-01
 
 ### USAGE:
 ###   ./compileLatex.sh TEX_FILE PATH_FILE
@@ -21,17 +21,18 @@
 ###               - The paths listed in the file should include a trailing slash
 ###               - This file should contain exactly three lines with one path
 ###                 define on each line:
-###               -- Line 1: Path to raw BibTex files
-###               -- Line 2: Path to BibTex annotation files
-###               -- Line 3: Path to helper script directory
+###               -- Line 1: Path to helper script directory
+###               -- Line 2: Path to raw BibTex files
+###               -- Line 3: Path to BibTex annotation files (optional: only
+###                          necessary when producing annotated bibliographies)
 
 texName=$(basename $1) # Name of the LaTeX file
 texPath=$(dirname $1)  # Directory holding the LaTeX file
 
 ## Define file paths used below:
-rawPath=$(cat $2 | sed -n "1p") # Raw BibTex
-annPath=$(cat $2 | sed -n "2p") # BibTex annotations
-binPath=$(cat $2 | sed -n "3p") # Software directory
+binPath=$(cat $2 | sed -n "1p") # Software directory
+rawPath=$(cat $2 | sed -n "2p") # Raw BibTex
+annPath=$(cat $2 | sed -n "3p") # BibTex annotations
 
 cd $texPath
 
@@ -41,10 +42,12 @@ t0=$(date +%T)
 ## Find the BibTex files used in the LaTeX doc:
 bibs=$(python ${binPath}findBib.py $texName)
 
-## Annotate the BibTex files:
+## Prepare the BibTex files:
 for bib in $bibs; do
-    if [ ! -f "$bib" ]; then
+    if [ ! -z "$annPath" ]; then # Annotate the BibTex files
 	python ${binPath}annotateBibFile.py ${rawPath}$bib ${annPath}$bib ./$bib
+    else # Copy the raw BibTex files to PWD
+	cp ${rawPath}$bib ./
     fi
 done
 
