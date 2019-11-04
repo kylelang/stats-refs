@@ -1,7 +1,7 @@
 %%% Title:    Gentle Introductory Reading List: Missing Data
 %%% Author:   Kyle M. Lang
 %%% Created:  2019-09-16
-%%% Modified: 2019-09-18
+%%% Modified: 2019-11-04
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -24,7 +24,11 @@
 
 \newcites{b,intro,mi,ml}{Books, Introductions/Reviews, MI-Focused, ML-Focused}
 
-% Set the title and author info
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./}
+
+%% Set the title and author info
 \title{Missing Data Analysis\\ \Large Gentle Introductory Reading List}
 \author{Compiled by Kyle M. Lang}
 
@@ -36,10 +40,11 @@
 
 The sources listed below offer a gentle introduction to missing data analysis.
 These readings focus on broad conceptual overviews without much technical detail
-or mathematical rigor (i.e., very few equations).
-
+or mathematical rigor (i.e., very few equations).\\
+\vspace{12pt}
 These sources are generaly oriented toward a social-scientific/psychological
-audience, so readers from other disciplines may find the examples shit.
+audience, so readers from other disciplines may find the examples somewhat less
+helpful.
 
 \nociteb{
   allison:2002,
@@ -64,15 +69,15 @@ audience, so readers from other disciplines may find the examples shit.
 }
 
 \bibliographystyleb{apacite}
-\bibliographyb{../../bibtex/missingData/books.bib}
+\bibliographyb{\bibPath/books.bib}
 
 \bibliographystyleintro{apacite}
-\bibliographyintro{../../bibtex/missingData/papers.bib}
+\bibliographyintro{\bibPath/papers.bib}
 
 \bibliographystylemi{apacite}
-\bibliographymi{../../bibtex/missingData/papers.bib}
+\bibliographymi{\bibPath/papers.bib}
 
 \bibliographystyleml{apacite}
-\bibliographyml{../../bibtex/missingData/papers.bib}
+\bibliographyml{\bibPath/papers.bib}
 
 \end{document}
