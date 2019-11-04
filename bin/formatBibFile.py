@@ -1,7 +1,16 @@
 ### Title:    Format BibTex file
 ### Author:   Kyle M. Lang
 ### Created:  2019-10-29
-### Modified: 2019-10-30
+### Modified: 2019-11-04
+
+### USAGE:
+###   python formatBibFile.py IN_FILE OUT_FILE
+
+### ARGS:
+###   IN_FILE  = Absolute or relative path (including file name and extension)
+###              to the file to be formatted
+###   OUT_FILE = Absolute or relative path (including file name and extension)
+###              to the file to be produced
 
 import sys
 import modBibFiles as mbf
