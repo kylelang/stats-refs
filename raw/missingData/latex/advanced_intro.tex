@@ -1,7 +1,7 @@
 %%% Title:    Advanced Introductory Reading List: Missing Data
 %%% Author:   Kyle M. Lang
 %%% Created:  2019-09-16
-%%% Modified: 2019-09-18
+%%% Modified: 2019-11-04
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -32,7 +32,11 @@
   Important\ Developments/Clarifications/Extensions%
 }
 
-% Set the title and author info
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./}
+
+%% Set the title and author info
 \title{Missing Data Analysis\\ \Large Advanced Introductory Reading List}
 \author{Compiled by Kyle M. Lang}
 
@@ -41,6 +45,18 @@
 \begin{document}
 
 \maketitle
+
+The sources listed below offer an extended/advanced introduction to missing data
+analysis. This list is meant to cover the basics of missing data from a
+technical, mathematically rigorous perspective. Readers without a strong
+background in mathematics/statistics may wish to begin with the sources listed
+in ``gentle\_intro.tex''.\\
+\vspace{12pt}
+Most of the following sources represent either seminal
+references in missing data or general overviews of the field. Consequently, this
+list does not necessarily represent the latest work in missing data theory.
+These sources should, however, provide a very thorough introduction to/overview
+of modern missing data theory.
 
 \nocitesemb{
   rubin:1987,
@@ -84,24 +100,24 @@
 }
 
 \bibliographystylesemb{apacite}
-\bibliographysemb{../../bibtex/missingData/books.bib}
+\bibliographysemb{\bibPath/books.bib}
 
 \bibliographystylegenb{apacite}
-\bibliographygenb{../../bibtex/missingData/books.bib}
+\bibliographygenb{\bibPath/books.bib}
 
 \bibliographystylemib{apacite}
-\bibliographymib{../../bibtex/missingData/books.bib}
+\bibliographymib{\bibPath/books.bib}
 
 \bibliographystylesemp{apacite}
-\bibliographysemp{../../bibtex/missingData/papers.bib}
+\bibliographysemp{\bibPath/papers.bib}
 
 \bibliographystylealgo{apacite}
-\bibliographyalgo{../../bibtex/missingData/papers.bib}
+\bibliographyalgo{\bibPath/papers.bib}
 
 \bibliographystylerev{apacite}
-\bibliographyrev{../../bibtex/missingData/papers.bib}
+\bibliographyrev{\bibPath/papers.bib}
 
 \bibliographystyleext{apacite}
-\bibliographyext{../../bibtex/missingData/papers.bib}
+\bibliographyext{\bibPath/papers.bib}
 
 \end{document}

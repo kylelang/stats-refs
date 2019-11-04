@@ -1,7 +1,7 @@
 %%% Title:    High-Dimensional Imputation Reading List
-%%% Author:   Kyle M. Lang
+%%% Author:   Kyle M. Lang, Edoardo Costantini
 %%% Created:  2019-10-09
-%%% Modified: 2019-10-29
+%%% Modified: 2019-10-30
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -30,9 +30,13 @@
   Multiple\ Imputation%
 }
 
-% Set the title and author info
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./} 
+
+%% Set the title and author info
 \title{Missing Data Analysis\\ \Large High-Dimensional Imputation}
-\author{Compiled by Kyle M. Lang}
+\author{Compiled by Kyle M. Lang & Edoardo Costantini}
 
 \raggedright
 
@@ -105,22 +109,22 @@ methods, I have attempted to classify each paper by its primary focus.
 
 \bibliographystylecomp{apacann}
 \urlstyle{same}
-\bibliographycomp{../bibtex/papers.bib}
+\bibliographycomp{\bibPath/papers.bib}
 
 \bibliographystyletree{apacann}
 \urlstyle{same}
-\bibliographytree{../bibtex/papers.bib}
+\bibliographytree{\bibPath/papers.bib}
 
 \bibliographystyleknn{apacann}
 \urlstyle{same}
-\bibliographyknn{../bibtex/papers.bib}
+\bibliographyknn{\bibPath/papers.bib}
 
 \bibliographystyleann{apacann}
 \urlstyle{same}
-\bibliographyann{../bibtex/papers.bib}
+\bibliographyann{\bibPath/papers.bib}
 
 \bibliographystylemi{apacann}
 \urlstyle{same}
-\bibliographymi{../bibtex/papers.bib}
+\bibliographymi{\bibPath/papers.bib}
 
 \end{document}
