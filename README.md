@@ -1,24 +1,27 @@
 # stats-refs
 
-This repository contains thematically organized reading lists/BibTex files for
-statistical content.
+This repository contains thematically organized reading lists and BibTex files
+for statistical content.
 
-## Structure
+## Directory Structure
 In an attempt to make this project as clear, user-friendly, and extensible as
-possible, we employ a particular directory structure.
+possible, we (the stats-refs core team) have imposed a particular directory
+structure.
 - This project contains two types of reading lists: *Raw* and *Annotated*.
-  - The materials that go into the raw reading lists are stored in in the */raw*
-    directory.
-  - The materials that go into the annotated reading lists are stored in in the
-    */annotated* directory.
-- The */bin* directory contains Python and BASH scripts to facilitate
-  programmatic modification, formatting, and compilation of reading lists
-- Both the */raw* and */annotated* directories contain thematic subdirectories
+  - The materials for the raw reading lists are stored in the */raw* directory.
+  - The (additional) materials for the annotated reading lists are stored in in
+    the */annotated* directory.
+- The */bin* directory contains Python and shell scripts to facilitate
+  programmatic modification, formatting, and compilation of BibTex and LaTeX
+  files.
+  - Both the */raw* and */annotated* directories contain thematic subdirectories
   (e.g., */raw/missingData*).
-- Each thematic subdirectory contains three subdirectories: *latex*, *bibtex*,
-  and *pdf*.
+	  - These thematic directories MAY contain additional subdirectories
+        dedicated to sub-themes.
+- Each thematic directory contains three subdirectories: *latex*, *bibtex*, and
+  *pdf*.
   - The *latex* directory contains the LaTeX files for each reading list.
-  - The *bibtex* directory contains the underlying BibTex files.
+  - The *bibtex* directory contains the BibTex files.
   - The *pdf* directory contains compiled reading lists in PDF format.
   
 ## Formatting
@@ -28,28 +31,66 @@ well-formatted BibTex files that could be used for diverse writing projects. To
 keep these files as clean and useful as possible, we impose the following 
 formatting rules.
 - The BibTex files in the */raw* directory MUST NOT contain annotations.
-  - I.e., these files have no `annote` field.
+  - I.e., the entries in these files have no `annote` field.
 - The BibTex files in the */annotated* directory MUST contain only annotations.
-  - I.e., the only field that these files have is the `annote` field.
-- The entries in all BibTex files MUST be ordered in ascending alpha-numeric
-  ordering with the following precedence:
+  - I.e., the only field that the entries in these files have is the `annote`
+    field.
+- The entries in all BibTex files MUST be sorted in ascending order based on the
+  following sequence of keys:
   1. The entry's `key` field, if defined
   1. The surnames of the entry's `author` field
   1. The entry's `year` field
-  1. The entry's `bibtexkey` field
+  1. The entry's citation-key
 - The first three fields in each entry SHOULD be:
   1. `title`
   1. `author`
   1. `year`
 - The remaining fields SHOULD be ordered alphabetically.
-- The `bibtexkey` field MUST be formatted as *author1Author2:year* where:
+
+### Format of BibTex citation-keys
+- The citation-key SHOULD be formatted as *author1Author2:year* where:
   - *author1* is the surname of the first author (with first letter lower-case)
-  - *author2* is one of the following:
+  - *Author2* is one of the following:
 	1. An empty string when the publication has exactly one author
     1. Surname of the second author (with first letter upper-case) when the
        publication has exactly two authors
 	1. The string-literal *"EtAl"* when the publication has three or more
        authors
+- Exceptions to the *author1Author2:year* rule MAY be made for canonical
+  citations of software.
+  - In these cases, the citation-key can be the name of the software package.
+	
+#### Citation-key examples
+
+Reference: 
+- Ross, B. (2000). A quantum theory of happy little trees. Journal of Quantum
+  Art, 3(14). 42.
+
+Key:
+- `ross:2000`
+
+Reference: 
+- Foo, A., & Bar, B. (2000). Why did the (prairie) chicken cross the road:
+  Numerical methods for modeling avian migration patterns. New York: Gotham
+  Publishing.
+
+Key:
+- `fooBar:2000`
+
+Reference: 
+- Cobain, K., Grohl, D., & Novoselic, K. (2000). A game-theoretic analysis of
+  early-career academics' research productivity. Journal of Probabilistic
+  Existential Dread. 1(2). 1 - 12.
+
+Key:
+- `cobainEtAl:2000`
+
+Reference:
+- Turing, A. (2000). stopIt: A header-only C++ library to solve the halting
+  problem.
+
+Key:
+- `turing:2000` *OR* `stopIt`
 
 ## Programmatic Workflows
 The project's formatting guidelines can be programatically applied to a BibTex
@@ -76,11 +117,11 @@ shell script.
 
 To execute the above commands, the script (i.e., `formatBibFile.py`,
 `annotateBibFile.py`, or `compileLatex.sh`) MUST be in the current working
-directory OR be findable via the search path defined by your $PATH variable
+directory OR be findable via the search path defined by your *$PATH* variable
 
 ## Contributing to the Project
 We're happy to accept contributions from people outside the core stat-refs
-team. All such contributions SHOULD be submitted via a pull request.
+team. All such contributions SHOULD be submitted via a GitHub pull request.
 
 In particular, we welcome any of the following types of contributions:
 - Annotations for existing BibTex entries

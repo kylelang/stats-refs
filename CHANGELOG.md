@@ -3,7 +3,7 @@ All notable changes to the **stat-refs** project (and some not so notable ones)
 will be documented in this file. The format of this log is based on [Keep a
 Changelog][kacl].
 
-## 2019-11-04
+## 2019-11-05
 
 ### Added
 - This ChangeLog
