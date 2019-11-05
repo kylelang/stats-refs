@@ -1,6 +1,6 @@
 # stats-refs
 
-This repository contains thematically organized reading lists/bibtex files for
+This repository contains thematically organized reading lists/BibTex files for
 statistical content.
 
 ## Structure
@@ -12,7 +12,7 @@ possible, we employ a particular directory structure.
   - The materials that go into the annotated reading lists are stored in in the
     */annotated* directory.
 - The */bin* directory contains Python and BASH scripts to facilitate
-  programatic modification, formatting, and compilation of reading lists
+  programmatic modification, formatting, and compilation of reading lists
 - Both the */raw* and */annotated* directories contain thematic subdirectories
   (e.g., */raw/missingData*).
 - Each thematic subdirectory contains three subdirectories: *latex*, *bibtex*,
@@ -53,16 +53,44 @@ formatting rules.
 
 ## Programmatic Workflows
 The project's formatting guidelines can be programatically applied to a BibTex
-file via the `/bin/formatBibFile.py` script.
-
+file via the `/bin/formatBibFile.py` Python script.
 - For example, running the following code would apply the formatting guidelines
   described above to `myRefs.bib` and return the formatted result as
-  `myRefs2.bib` (assuming `formatBibFile.py` and `myRefs.bib` are in the current
-  working directory).
-  - `python formatBibFile.py myRefs.bib myRefs2.bib`
-
+  `myRefs2.bib`.
+  - `python formatBibFile.py /path/to/myRefs/myRefs.bib myRefs2.bib`
+  
 BibTex files can be annotated (e.g., by merging the BibTex files from the */raw*
-and */annotated* directories) via the `/bin/annotateBibFile.py` script.
-
+and */annotated* directories) via the `/bin/annotateBibFile.py` Python script.
+- For example, running the following code would apply the annotations contained
+  in `myAnnotations.bib` to `myRefs.bib` and return the results as
+  `myRefs2.bib`.
+  - `python annotateBibFile.py /path/to/myRefs/myRefs.bib
+    /path/to/myAnnotations/myAnnotations.bib myRefs2.bib`
+  
 LaTeX files can be compiled into PDF files via the `/bin/compileLatex.sh`
-script.
+shell script.
+- For example, running the following code would compile `myDoc.tex` using the
+  resources defined in `myPaths.txt` (please refer to the documentation in the
+  `compileLatex.sh` script for details on how to format the `myPaths.txt` file).
+  - `./compileLatex.sh /path/to/myDoc/myDoc.tex /path/to/myPaths/myPaths.txt`
+
+To execute the above commands, the script (i.e., `formatBibFile.py`,
+`annotateBibFile.py`, or `compileLatex.sh`) MUST be in the current working
+directory OR be findable via the search path defined by your $PATH variable
+
+## Contributing to the Project
+We're happy to accept contributions from people outside the core stat-refs
+team. All such contributions SHOULD be submitted via a pull request.
+
+In particular, we welcome any of the following types of contributions:
+- Annotations for existing BibTex entries
+- New BibTex entries
+- New reading lists within an extant theme (i.e., LaTeX source and compiled PDF
+  documents)
+- New thematic directories
+  - Any new thematic directories SHOULD include, at least, a [set of] BibTex
+    files.
+- Corrections to errors in existing BibTex files
+- Improvements to the scripts in the *\bin* directory
+- Scripts to make the programmatic workflow described above portable to non-*nix
+  style operating systems
