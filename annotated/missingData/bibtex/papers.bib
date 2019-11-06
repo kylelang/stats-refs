@@ -369,6 +369,30 @@ annote =
 	}
 }
 
+@article{rubin:1976,
+annote = 
+	{
+	The article defines the conditions under which statistical inference can still be considered proper while
+		ignoring the missing data mechanisms. This is the reference source for the technical definitions
+		of data Missing at Random (MAR), Observed at Random (OAR), and distinctness of the model parameter 
+		of interest (i.e. the object of inference) and the nuisance parameter (i.e. the parameter of the 
+		missing data process). Apart from rigorous theorems the article presents easy-to-grasp examples
+		of what MAR, OAR, and distinctness mean and imply.
+	}
+}
+
+@article{rubin:1978,
+annote = 
+	{
+	The article defines the foundations of Multiple Imputation, the procedure that imputes missing values
+		reflecting the uncertainty within an imputation model and the sensitivity of inferences to
+		different imputation models. The article distinguishes three fundamental tasks in the process
+		of creating imputations: a modelling task, that chooses a model for the data, an estimation task,
+		that finds the posterior distribution for its model parameters, and the imputation task that takes
+		draws from the associated predictive distribution given the observed data.
+	}
+}
+
 @article{rubin:1996,
 annote = 
 	{
@@ -607,6 +631,29 @@ annote =
 	The main setup considered in this study is that of a linear regression model fitted to a
 		dataset with MAR missing data. However, the author addresses the extension of
 		the claims to models for binary dependent variables.	
+	}
+}
+
+@article{xuEtAl:2016,
+annote = 
+	{
+	The authors implemented a Multiple Imputation method using Bayesian Additive Regression Tree prediction
+		algorithm proposed by Chipman \textit{et al} (2010) and Bayesian CART. Through BART, a set of 
+		different regression tress contributes to defining the predictive distribution of the missing values 
+		given the observed ones. For each continuous variable with missing values, a full conditional 
+		distribution is specified as a normal distribution centered around the sum-of-trees resulting from 
+		the BART model and draws are done with a Metropolis-Hastings algorithm (for binary variables a similar 
+		procedure is followed assuming continuous latent variables, while Bayesian CARTs are used for 
+		polytomous variables). Interestingly, the BART procedure in a way bypasses the modelling task as 
+		defined by Rubin 1978, as MICE does. However, using BART to specify the univariate conditional 
+		distributions assures that the imputation model corresponds to a valid joint model. \\
+
+	The approach proved to work similarly or better than standard MICE, and MICE with CART, and showed interesting 
+		desirable features that grant it an edge over other methods. Apart from the greater theoretical soundness,  
+		multiple imputation using BART and Bayesian CART proved to be more robust to different variable imputation 
+		orderings compared to other univariate sequential conditional imputation methods, such as MICE. Another 
+		desirable feature is the potential for variables selection that is inherent in the BART algorithm. 
+		However, the present paper did not explore such feature.
 	}
 }
 
