@@ -28,6 +28,10 @@
   Bayesian\ Papers%
  }
 
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./}
+
 % Set the title and author info
 \title{Mathematical Foundations\\ \Large Reading List}
 \author{Compiled by Edoardo Costantini}
@@ -45,8 +49,7 @@
 }
 \nocitedistrp{
 	arnold:2001,
-	gelmanraghunthan:2001,
-	dempster:1977%	
+	gelmanraghunthan:2001%	
 }
 \nocitebayp{
 	gelman:1993,
@@ -55,14 +58,14 @@
 
 \bibliographystyleintrob{apacann}
 \urlstyle{same}
-\bibliographyintrob{../bibtex/books.bib}
+\bibliographyintrob{\bibPath/books.bib}
 
 \bibliographystyledistrp{apacann}
 \urlstyle{same}
-\bibliographydistrp{../bibtex/papers.bib}
+\bibliographydistrp{\bibPath/papers.bib}
 
 \bibliographystylebayp{apacann}
 \urlstyle{same}
-\bibliographybayp{../bibtex/papers.bib}
+\bibliographybayp{\bibPath/papers.bib}
 
 \end{document}
