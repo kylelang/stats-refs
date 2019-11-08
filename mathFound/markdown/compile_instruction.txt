@@ -1,0 +1,4 @@
+In terminal, go to directory: ./stats-refs/mathFound
+Use line:
+
+pandoc -s --bibliography bibtex/papers.bib --bibliography bibtex/books.bib --filter pandoc-citeproc markdown/annoLit.md -o pdf/output.pdf
