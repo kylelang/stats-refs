@@ -1,0 +1,83 @@
+%%% Title:    Gentle Introductory Reading List: Missing Data
+%%% Author:   Kyle M. Lang
+%%% Created:  2019-09-16
+%%% Modified: 2019-11-04
+
+\documentclass[12pt]{article}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage[natbibapa]{apacite}
+\usepackage{multibib}
+\usepackage[libertine]{newtxmath}
+\usepackage{hyperref}
+\usepackage{datetime2}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
+
+\newcites{b,intro,mi,ml}{Books, Introductions/Reviews, MI-Focused, ML-Focused}
+
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./}
+
+%% Set the title and author info
+\title{Missing Data Analysis\\ \Large Gentle Introductory Reading List}
+\author{Compiled by Kyle M. Lang}
+
+\raggedright
+
+\begin{document}
+
+\maketitle
+
+The sources listed below offer a gentle introduction to missing data analysis.
+These readings focus on broad conceptual overviews without much technical detail
+or mathematical rigor (i.e., very few equations).\\
+\vspace{12pt}
+These sources are generaly oriented toward a social-scientific/psychological
+audience, so readers from other disciplines may find the examples somewhat less
+helpful.
+
+\nociteb{
+  allison:2002,
+  enders:2010,
+  graham:2012%
+}
+\nociteintro{
+  schaferGraham:2002,
+  graham:2009,
+  littleEtAl:2013,
+  langLittle:2018,
+  baraldiEnders:2010,
+  enders:2013%
+}
+\nocitemi{
+  rubin:1996%
+}
+\nociteml{
+  enders:2001-mlr,
+  enders:2001-primer,
+  endersBandalos:2001%
+}
+
+\bibliographystyleb{apacite}
+\bibliographyb{\bibPath/books.bib}
+
+\bibliographystyleintro{apacite}
+\bibliographyintro{\bibPath/papers.bib}
+
+\bibliographystylemi{apacite}
+\bibliographymi{\bibPath/papers.bib}
+
+\bibliographystyleml{apacite}
+\bibliographyml{\bibPath/papers.bib}
+
+\end{document}
