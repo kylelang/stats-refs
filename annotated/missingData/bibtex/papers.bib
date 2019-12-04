@@ -1,7 +1,7 @@
 %%% Title:    Missing Data Journal Articles: Annotations
-%%% Author:   Edoardo Costantini, Kyle M. Lang
+%%% Author:   Edoardo Costantini, Kyle M. Lang, & Stats-Refs Contributors
 %%% Created:  2019-09-13
-%%% Modified: 2019-11-04
+%%% Modified: 2019-12-04
 
 @article{anderson:1957,
 annote = 
@@ -40,6 +40,32 @@ annote =
 		estimates), and that their bootstrap version of an imputing decision tree compensates well for the
 		extra variability added by the imputation process.
 	}
+}
+
+@article{browningBrowning:2009,
+annote = { The authors aim to develop methods for genotype imputation and
+                  inference for large data sets of unrelated individuals and
+                  parent-offspring trios. A general class of hidden Markov
+                  models (HMMs) is proposed to analyse missing data. The authors
+                  first present methods for building the haplotype HMM. The
+                  iterations of the model-building and samplings step are used
+                  to achieve an accurate haplotype HMM. The authors indicate
+                  that if the haplotype is weighted in the iterativealgorithm,
+                  the model will be more accurate with a smaller amount of
+                  iterations. There’s another way of improving the accuracy of
+                  the model, which is averaging the posterior genotype
+                  probabilities over multiple iterations. The methods are
+                  implemented in BEAGLE 3.0 package and BEAGLE is compared with
+                  IMPUTE. BEAGLE 3.0 can work with either phased or unphased
+                  reference panel while IMPUTE requires a phased reference
+                  panel. The authors evaluate the imputation accuracy and
+                  computational efficiency through real data sets and simulation
+                  studies. The results show that posterior probabilities are
+                  well evaluated. For estimating the accuracy of the imputation,
+                  the authors also propose a useful method for measuring allelic
+                  R 2 .  Finally, the authors conclude that the size of the
+                  reference panels is also essential for the imputation
+                  accuracy. }
 }
 
 @article{burgetteReiter:2010,
@@ -321,6 +347,32 @@ annote =
 	}
 }
 
+@article{lohEtAl:2012,
+annote = { The authors aim to solve the nonvonvexity problem in the context of
+                  high-dimensional sparse linear regression. The authors claim
+                  that the estimators often become nonconvex with noisy data in
+                  current approaches such as EM algorithm. It can not be
+                  guaranteed that the local minimum is the global minimum during
+                  the estimation in such cases. The authors propose that
+                  projected gradient descent algorithm will produce a sufficient
+                  output with a small statistical error, which means an accurate
+                  imputation. The authors describe two general theorems that the
+                  first theorem provides bounds on the statistical error, and
+                  the second theorem provides bounds on the optimisation error
+                  from the theoretical aspect which are essential for the
+                  estimation. The proposed method is then presented with
+                  different sets of noisy data, they all provide that the
+                  estimators from the projected gradient descent algorithm have
+                  high accuracy. The authors further confirm their predictions
+                  in theory illustrations with simulations studies. The authors
+                  conclude that although the results from the projected gradient
+                  descent remain nonconvex, its accuracy is statistically
+                  acceptable. One restriction is that the data are assumed to be
+                  sub-Gaussian in the projected gradient descent
+                  algorithm. Further study is needed for applying to the more
+                  general datasets with noise.  }
+}
+
 @article{oba2003bayesian,
   annote = 
   	{
@@ -385,6 +437,28 @@ annote =
 		threshold). The counterpart scenario in a missing data context is imputing a fully missing variable with
 		especially good initial guesses.
 	}
+}
+
+@article{robbinsEtAl:2013,
+annote = { The authors develop an imputation method specifically for the USDA’s
+                  Agricultural Resource Management Survey (ARMS) dataset. The
+                  authors argue that current imputation method, a form of mean
+                  imputation, does not perform well. The authors first claim
+                  that ARMS data is not normally distributed even after a
+                  log-transformation and its complexity. The skew normal
+                  transformation is then considered for a jointly normal
+                  model. The authors illustrate several criteria to select the
+                  predictors for the model as well. The authors present a new
+                  imputation method through Markov chain Monte Carlo sampling
+                  from the joint model. After the initialise the Markov chain,
+                  iterative sequential regression (ISR) is needed to generate
+                  repeated imputation for more accurate estimation. Finally, the
+                  authors apply the method to the ARMS data, it’s shown that the
+                  new method outperforms the old (mean imputation) approach
+                  significantly. The results are evaluated by the consistency of
+                  observed data and imputations through density analysis,
+                  posterior predictive p-values, etc. It’s shown that ISR method
+                  is efficient in this application. }
 }
 
 @article{rubin:1976,
@@ -465,6 +539,31 @@ annote =
 		the author's method mathced or outperformed the traditional parametric MICE and outperformed their proposed
 		MI-missForest approach.
 	}
+}
+
+@article{shahEtAl:2017,
+annote = { The authors aim to develop an imputation method for truncated high
+                  dimensional data in metabolomics studies. The authors develop
+                  the K-Nearest Neighbors Truncation approach (KNN-TN) which is
+                  an extension to the KNN imputation algorithm. The means and
+                  standard deviation are estimated first from the truncated
+                  normal distribution with KNN-TN approach, they are then used
+                  to standardise the metabolites. The data are assumed to miss
+                  due to the limit of detection (LOD). Both data missing at
+                  random (MAR) and missing not at random (MNAR) are considered
+                  under this assumption. The root mean squared error (RMSE) is
+                  used to evaluate the performance of the imputation. The
+                  authors compare KNN-TN approach with other KNN approaches in a
+                  simulation study with different data set sizes and real
+                  metabolomics studies.  When dealing with data missing at
+                  random combined with an LOD, the imputation results show that
+                  KNN-TN approach has the lowest RMSEA compared to KNN approach
+                  based on the Euclidean (KNN-EU) and Correlation (KNN-CR). In
+                  addition, all three KNN approaches perform better than the
+                  standard methods such as zero, minimum and mean
+                  imputation. The authors claim that sample size is
+                  important. When the sample is too small, the KNN-TN performs
+                  not better than KNN-CR approach due to the poor estimation.  }
 }
 
 @article{songBelin:2004,
