@@ -1,0 +1,84 @@
+%%% Title:    Mathematical Foundation Books
+%%% Author:   Edoardo Costantini
+%%% Created:  2019-12-10
+%%% Modified: 2019-12-10
+
+@article{chipman:1998,
+ annote=
+ 	{
+ 	The authors propose a Bayesian approach for finding of classification and regression trees that outperforms, mainly 
+	in terms of predictive performance, trees grown according to more traditional routines.
+		This approach has two components:
+		\begin{itemize}
+		\item a prior specification for the set of possible CART models, which entails the specification
+			of a prior for the tree space and one for the terminal nodes of each tree.
+			\begin{itemize}
+		\item the specification of a prior probability that terminal node $\eta$ is split ($p_{SPLIT}$), and the probability of
+			assigning splitting rule $\rho$ to $\eta$ if it is split ($p_{RULE}$). The prior assigned to $p_{SPLIT}$, depends on
+			the number of splits above $\eta$ in a way that favours trees that have terminal nodes that do not vary much in
+			depth (i.e. number of splits above). The prior for $p_{RULE}$ is a uniform specification: all the variables have 
+			uniform probability of being chosen as splitting variables, and all the observed values on these variables have the
+			 same probability of being chosen as splitting values.
+		\item priors for terminal nodes parameters (e.g. vector of terminal node means) are usually specified assuming 
+			independence of terminal node parameters across terminal nodes. For regression trees, one could use 
+			normal priors centred around some shared mean value with a shared (or not) error variance; for classification
+			trees Dirichlet distributions (multivariate generalisation of a beta prior) are recommended.
+			\end{itemize}
+		\item a stochastic search of a promising CART (guided by the prior) through a Metropolis-Hastings
+			search algorithm. After deciding on an initial tree, the proposal tree is obtained through one of four strategies
+			(randomly selected): grow, prune, change, swap (see paper for details) and an acceptance ratio is computed
+			based on the current and new tree draw. Such procedure simulates a Markov Chain sequence of trees that
+			converges to the tree posterior distribution of interest $P(T|Y,X)$.
+		\end{itemize}	
+	}
+ }
+
+@article{chipman:2010,
+ annote=
+ 	{
+ 	The authors propose and ensemble method for approximating the expected value of some continuous and dichotomous Y, conditioned on
+		a p-dimensional X matrix of predictors, by a sum of $m$ regression trees. This Bayesian Additive Regression Tree
+		method uses a sum-of-trees to approximate $f(x)=E(Y|X)$ and it does so by imposing a regularising prior that weakens
+		 each of the $m$ trees making up the sum-of-trees. By doing so, each tree part of the sum is explaining a small but 
+		 unique portion of $f$, and in this sense BART is not the same as averaging single trees fitted to approximate
+		 $f$, as boosting, bagging and random forests do.
+	A BART model is made up of two fundamental parts:
+	\begin{itemize}
+		\item the sum-of-trees model
+		$ Y = \Sigma_{j=1}^{m} g(x; T_j, M_j)+\epsilon $ with $\epsilon \sim N(0, \sigma^2)$
+		where $g(...)$ is the function that assigns one of the terminal node parameters in $M_j$ of tree $T_j$ to all observation in
+		$x$
+		\item a (set of) regularising prior(s) for all of the parameters in the sum-of-trees model: all of the $T_j$ and $M_j$, and
+		 $\sigma$. These priors keep the effect of each individual tree small. Interestingly: the $T_j$ (independent) prior is operationalised
+		 exactly as for for the Bayesian CART in Chipman 1998 (see equation 7 of both papers) in terms of a the probability that a split
+		 is non terminal ($p_{SPLIT}=\alpha(1+d)^{\beta}$) and uniform probabilites of selecting a variable as a splitting one and an
+		 observed value as a splitting value; the prior for the components of $M_j$, $\mu_{ij}$ are normal priors with shared values for
+		 the mean and variance hyperparameters, which ends up being a specific version of the standard conjugate normal prior specified
+		 in equation 9 of Chipman 1998: finally the prior for $\sigma**2$ is also the same the one specified for the Bayesian CART, just 
+		 expressed with the alternative inverse-chi-square parametrisation.
+		 \item choice of $m$ - BART needs to a fixed number of $m$ trees to be defined. This number is usually required to be high for 
+		 prediction tasks, but when small (say 5 to 10) makes BART an interesting variable selection routine.
+	\end{itemize}
+	Compared to Chipman 1998, BART produces a posterior probability of a collection of $m$ different trees conditioned on a dataset (Y,X) 
+		$p((T_1,M_1), ...,  T_j,M_j), ..., T_m,M_m), \sigma^2|Y,X)$, instead of the posterior probability of one single tree $P(T|Y,X)$. 
+		However, the draws of each $(T_j, M_j)$ can be done by drawing $T_j$ with the Metropolis–Hastings algorithm defined in Chipman
+		1998 using a modified version of the data (y minus the fit from the sum of trees excluding the current tree), and the draws of $M_j$ 
+		can be done from normal distributions.
+	By iterating K times, meaning repeating the draw of all of the $m$ trees and $\sigma^2$ K times, we obtain a sequnce of $f^{*}$ draws that
+		approximates the posterior disitrbution of $p(f|y)$, whatever $f(.)$ is.
+	}
+}
+
+@article{kyung:2010,
+ annote=
+ 	{
+	Add note
+	}
+}
+
+@article{parkCasella:2008,
+ annote=
+ 	{
+	Add note
+	}
+}

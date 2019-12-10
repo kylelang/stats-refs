@@ -15,4 +15,12 @@ Changelog][kacl].
 ### Changed
 - Updated the README.md file
 
+## 2019-12-10
+
+### Added
+- Bayesian Statistics separte literature folder
+
+### Changed
+- addedd .swp files to the ignore list in .gitignore 
+
 [kacl]: http://keepachangelog.com/
