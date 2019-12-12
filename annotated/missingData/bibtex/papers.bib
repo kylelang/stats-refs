@@ -452,7 +452,7 @@ annote =
 	}
 }
 
-@article{shah:2014,
+@article{shahEtAl:2014,
 annote = 
 	{
 	The authors propose a modfied MICE apporach that uses a Random Forest to generate the conditional distribution 
@@ -464,6 +464,20 @@ annote =
 	The results show good performances of the proposed MICE-Forest in terms of bias and efficiency. In particular,
 		the author's method mathced or outperformed the traditional parametric MICE and outperformed their proposed
 		MI-missForest approach.
+	}
+}
+
+@article{stekhovenBuhlmann:2011,
+annote = 
+	{
+	The authors propose an imputation algorithm that exploits the advantages of random forests over traditional 
+		CARTs to improve the accuracy of the imputed missing values. Their imputation algorithm sequentially 
+		imputes variables $X_s$, with $s=1,...,p$ and $p$ number of variables afflicted by missingness, 
+		ordered by ascending percentages of missing values, by fitting a random forest to predict the observed 
+		part of $X_s$ ($y_{obs}^{(s)}$) with the corresponding complete $x_{obs}^{(s)}$, and imputing the missing 
+		part of $X_s$ ($y_{mis}^{(s)}$) with predicted values obtained by applying the trained random forest to the
+		corresponding complete $x_{mis}^{(s)}$. The algorithm stops after a criterion is reached and results in a 
+		single imputation for each missing value.
 	}
 }
 
@@ -479,18 +493,6 @@ annote =
 	The approach shows low bias and good coverage properties, however its implementation is restricted to a high-
 		dimensional multivariate normal data. Furthermore, this method requires that the true number of components
 		is known.
-	}
-}
-
-@article{stekhovenBuhlmann:2011,
-annote = 
-	{
-	The authors propose an imputation algorithm that exploits the advantages of random forests over traditional 
-		CARTs to improve the accuracy of the imputed missing values. Their imputation algorithm sequentially 
-		imputes variables $y_s$ with $s=1,...,p$ and $p$ number of variables afflicted by missingness, 
-		ordered by ascending percentages of missing values, by fitting a random forest to predict the observed 
-		part of $y_s$ with the corresponding observed $x$s, and imputing the missing part of $y_s$ with 
-		predicted values obtained by applying the trained random forest to the corresponding observed $x$s.
 	}
 }
 

@@ -1,7 +1,7 @@
 %%% Title:    Mathematical Foundation Books
 %%% Author:   Edoardo Costantini
 %%% Created:  2019-12-10
-%%% Modified: 2019-12-10
+%%% Modified: 2019-12-12
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -22,8 +22,9 @@
 
 \geometry{verbose, tmargin = 1in, bmargin = 1in, lmargin = 1in, rmargin = 1in}
 
-\newcites{books,regureg,trees}{%
+\newcites{books,gener,regureg,trees}{%
   Books,%
+  General\ knowledge,%
   Regularized\ Regression,%
   Tree\ modelling%
  }
@@ -46,6 +47,12 @@
 	hoff:2009,
 	gelman:2013%
 }
+
+\nocitegener{
+	gelman:1993,
+	gelmanRaghunthan:2001%	
+}
+
 \nociteregureg{
 	kyung:2010,
 	parkCasella:2008%
@@ -56,12 +63,19 @@
 }
 
 \bibliographystylebooks{apacann}
+\urlstyle{same}
 \bibliographybooks{\bibPath/books.bib}
 
+\bibliographystylegener{apacann}
+\urlstyle{same}
+\bibliographygener{\bibPath/papers.bib}
+
 \bibliographystyleregureg{apacann}
+\urlstyle{same}
 \bibliographyregureg{\bibPath/papers.bib}
 
 \bibliographystyletrees{apacann}
+\urlstyle{same}
 \bibliographytrees{\bibPath/papers.bib}
 
 \end{document}

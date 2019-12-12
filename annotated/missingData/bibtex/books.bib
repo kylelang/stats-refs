@@ -69,6 +69,18 @@ annote =
 			and mathematically explicit examples. However, an interested reader might
 			benefit from the less abstract description of the I- and P-steps such as
 			that presented in Enders (2010, ch. 7).
+			
+		\item Chapter 4 presents two ways of extracting information from the Markov chain
+			of a data augmentation algorithm: parameter simulation and multiple imputation.
+			This distinction is important ... .
+			Furthermore, another important distinction is drawn between frequentist proper 
+			(Rubin 1987 definition based on the frequentist properties of estimators) and 
+			Bayesianly proper multiple imputation. The latter is achieved if the imputations
+			are independent realisations of $P(y_{miss}|y_{obs})$, the posterior predictive distribution of the missing data
+			under some complete model and prior. Note that:
+			\begin{equation}
+			P(y_{miss}|y_{obs}) = \int P(y_{miss}|y_{obs},\theta) P(\theta|y_{obs}) d\theta
+			\end{equation].
 
 	\end{itemize}
 	}
@@ -76,8 +88,8 @@ annote =
 
 @book{vanBuuren:2012,
 annote={
-    This book is practically a technical companion to the R package that implements
-    the MICE algorithm.
+    This book is a good introduction to Multiple Imputation through Chained Equation and a technical companion
+    to the R package that implements the MICE algorithm.
 
     \begin{itemize}
     
