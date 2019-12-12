@@ -3,6 +3,21 @@ All notable changes to the **stat-refs** project (and some not so notable ones)
 will be documented in this file. The format of this log is based on [Keep a
 Changelog][kacl].
 
+## 2019-12-12
+
+### Added
+- Statistical Learning separate literature folder
+
+
+## 2019-12-10
+
+### Added
+- Bayesian Statistics separate literature folder
+
+### Changed
+- addedd .swp files to the ignore list in .gitignore 
+
+
 ## 2019-11-05
 
 ### Added
@@ -14,13 +29,5 @@ Changelog][kacl].
 
 ### Changed
 - Updated the README.md file
-
-## 2019-12-10
-
-### Added
-- Bayesian Statistics separte literature folder
-
-### Changed
-- addedd .swp files to the ignore list in .gitignore 
 
 [kacl]: http://keepachangelog.com/

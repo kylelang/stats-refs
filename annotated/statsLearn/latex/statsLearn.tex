@@ -1,0 +1,51 @@
+%%% Title:    Gentle Introductory Reading List: Missing Data
+%%% Author:   Kyle M. Lang
+%%% Created:  2019-12-12
+%%% Modified: 2019-12-12
+
+\documentclass[12pt]{article}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage[natbibapa]{apacite}
+\usepackage{multibib}
+\usepackage[libertine]{newtxmath}
+\usepackage{hyperref}
+\usepackage{datetime2}
+\usepackage{url} % for url  in the course citations
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
+
+\newcites{b}{Books}
+
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./}
+
+%% Set the title and author info
+\title{Statistical Learning Literature}
+\author{Compiled by Edoardo Costantini}
+
+\raggedright
+
+\begin{document}
+
+\maketitle
+
+\nociteb{
+	friedmanEtAl:2001,
+	jamesEtAl:2013%
+}
+
+\bibliographystyleb{apacann}
+\urlstyle{same}
+\bibliographyb{\bibPath/books.bib}
+
+\end{document}
