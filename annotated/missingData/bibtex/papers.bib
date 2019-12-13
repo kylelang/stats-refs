@@ -455,14 +455,24 @@ annote =
 @article{shahEtAl:2014,
 annote = 
 	{
-	The authors propose a modfied MICE apporach that uses a Random Forest to generate the conditional distribution 
-		from which the imputed values are drawn. The approach is meaningfully different from multiple imputations
-		obtained by multiple parallel runs of \textit{missForest}, the random forest imputation method proposed by 
-		Stekhoven and B{\"u}hlmann (2012) which results in a deterministic imputation, albeit weighted across 
-		different trees.
+	The authors propose a modified MICE approach that uses a Random Forest to generate the conditional distribution 
+		from which the imputed values are drawn. \\
+		
+	The approach is meaningfully different from multiple imputations obtained by multiple parallel runs of \textit{missForest},
+		the random forest imputation method proposed by Stekhoven and B{\"u}hlmann (2012) which results in a 
+		deterministic imputation, albeit weighted across different trees.  \\
+		
+	At the same time, Shah et al's algorithm is different from the implementation of random forests in MICE described by
+	 	Doove et al (2014, appendix A.1) and implemented in the 'mice' R package. The main difference is in how the
+		multiple trees in the forest are used to impute the missing values: in Shah et al's algorithm for continuous variables, 
+		the missing value is sampled from a normal distribution centred around the aggregated predicted value for the 
+		'test' data (imputation model X values for the unobserved Y values) and the out-of-bag error is used as variance, 
+		while their categorical variable algorithm samples one tree at random from the k trees that populate the forest 
+		and use it for prediction; in the 'mice' package version, each value of $y_j^{miss}$ is sampled from a donor pool
+		defined by all of the $y_j^{obs}$ that end up in the k leafs defined by the k trees in the random forest. \\
 
 	The results show good performances of the proposed MICE-Forest in terms of bias and efficiency. In particular,
-		the author's method mathced or outperformed the traditional parametric MICE and outperformed their proposed
+		the author's method matched or outperformed the traditional parametric MICE and outperformed their proposed
 		MI-missForest approach.
 	}
 }

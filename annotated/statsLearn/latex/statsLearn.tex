@@ -23,7 +23,7 @@
 
 \geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
 
-\newcites{b}{Books}
+\newcites{b,ensemble}{Books,Ensemble Methods}
 
 %% Define the path to bibtex files
 %% Set to current directory when compiling via 'compileLatex.sh'
@@ -44,8 +44,14 @@
 	jamesEtAl:2013%
 }
 
+\nociteensemble{
+	breiman:2001%
+}
+
 \bibliographystyleb{apacann}
-\urlstyle{same}
 \bibliographyb{\bibPath/books.bib}
+
+\bibliographystyleensemble{apacann}
+\bibliographyensemble{\bibPath/papers.bib}
 
 \end{document}
