@@ -668,9 +668,13 @@ annote =
 annote = 
 	{
 	The authors implemented a Multiple Imputation method using Bayesian Additive Regression Tree prediction
-		algorithm proposed by Chipman \textit{et al} (2010) and Bayesian CART. Through BART, a set of 
-		different regression tress contributes to defining the predictive distribution of the missing values 
-		given the observed ones. For each continuous variable with missing values, a full conditional 
+		algorithm proposed by Chipman \textit{et al} (2010) and Bayesian CART. They propose a Bayesian
+		non-parametric join model of the variables with missing values as the product of sequential univariate 
+		conditional models for continuous and categorical covariates. This has the advantage of guarantying
+		a valid join model, compared to MICE, but the disadvantage of being not invariant to the ordering
+		of the conditioning.
+		Through BART, a set of different regression tress contributes to defining the predictive distribution 
+		of the missing values given the observed ones. For each continuous variable with missing values, a full conditional 
 		distribution is specified as a normal distribution centered around the sum-of-trees resulting from 
 		the BART model and draws are done with a Metropolis-Hastings algorithm (for binary variables a similar 
 		procedure is followed assuming continuous latent variables, while Bayesian CARTs are used for 
