@@ -1,7 +1,7 @@
 %%% Title:    Mathematical Foundation Books
 %%% Author:   Edoardo Costantini
 %%% Created:  2019-12-10
-%%% Modified: 2019-12-12
+%%% Modified: 2020-04-102
 
 \documentclass[12pt]{article}
 \usepackage{libertine}
@@ -22,9 +22,10 @@
 
 \geometry{verbose, tmargin = 1in, bmargin = 1in, lmargin = 1in, rmargin = 1in}
 
-\newcites{books,gener,regureg,trees}{%
+\newcites{books,gener,samp,regureg,trees}{%
   Books,%
   General\ knowledge,%
+  Sampling,%
   Regularized\ Regression,%
   Tree\ modelling%
  }
@@ -53,9 +54,18 @@
 	gelmanRaghunthan:2001%	
 }
 
+\nocitesamp{
+	dagpunar:2007,
+	gilksWild:1992,
+	gilksEtAl:1995,
+	giudiciEtAl:2013%
+}
+
 \nociteregureg{
 	griffinBrown:2005,
 	griffinBrown:2011,
+	hans:2009,
+	hans:2010,
 	kyung:2010,
 	liYao:2018,
 	parkCasella:2008%
@@ -72,6 +82,10 @@
 \bibliographystylegener{apacann}
 \urlstyle{same}
 \bibliographygener{\bibPath/papers.bib}
+
+\bibliographystylesamp{apacann}
+\urlstyle{same}
+\bibliographysamp{../bibtex/papers.bib}
 
 \bibliographystyleregureg{apacann}
 \urlstyle{same}

@@ -1,7 +1,7 @@
 %%% Title:    Mathematical Foundation Books
 %%% Author:   Edoardo Costantini
 %%% Created:  2019-12-10
-%%% Modified: 2019-12-12
+%%% Modified: 2020-04-02
 
 @article{chipman:1998,
  annote=
@@ -69,6 +69,15 @@
 	}
 }
 
+@inbook{dagpunar:2007,
+  annote = 
+  	{
+	It provides a very clear description of rejection sampling with clear (and reproducible) 
+	examples. It is particularly helpful to understand the interplay of the envelope and squeezing
+	functions. The section dedicated to rejection sampling is also insightful.
+  	}
+}
+
 @article{gelman:1993,
   annote=
   	{
@@ -84,6 +93,24 @@
 		but for the purpose of multiple imputation. This is simply a short compendium 
 		that facilitate the understanding of SRMI/FCS Multiple Imputation for someone 
 		coming from a more traditional Bayesian background.
+	}
+}
+
+@article{gilksWild:1992,
+ annote = 
+	{
+	Main reference describing the use of adaptive rejection sampling to sample from
+	log-concave full conditional distributions.
+	For a good description of ARS, look at books by Dagpunar (2007) and Giudici et al
+	(2007), also described in this archive.
+	}
+}
+
+@article{gilksEtAl:1995,
+ annote = 
+	{
+	Main reference describing the use of adaptive rejection sampling to sample from 
+	non-log-concave full conditional distributions (generalisation of Gilks and Wilds (1992)).
 	}
 }
 
@@ -106,9 +133,34 @@
  annote = 
 	{
 	With this study, the authors propose priors for Bayesian Lasso that are generalisations
-		of Park and Casella's (2008) one
+		of Park and Casella's (2008) one.
 	}
 }
+
+@inbook{giudiciEtAl:2013,
+ 	{
+	Contains detailed description of two important sampling methods for random variates:
+	(1) the inverse cumulative distribution method, and (2) (adaptive) rejection sampling.
+	It is particularly helpful to see how to derive a CDF from a PDF and use it to sample for sampling,
+	and how to generate samples from a piecewise linear (or exponential) envelope.
+	}  
+}
+
+@article{hans:2009,
+  annote = 
+	{
+	A new Gibbs sampler is proposed for Bayesian Lasso regression.
+	}
+}
+
+@article{hans:2010,
+ annote = 
+	{
+	Extends the Bayesian lasso Gibbs sampler proposed in Hans (2009) to account for 
+	large numbers of predictors	
+	}
+}
+
 
 @article{kyung:2010,
  annote=
