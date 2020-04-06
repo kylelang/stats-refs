@@ -573,13 +573,13 @@ annote =
 	The authors introduce the INImpute approach, an algorithm that combines an iterative SVD-based 
 		least-square imputation with a nearest neighbour approach. Missing values are imputed 
 		first globally (i.e. considering the entire dataset) through an Iterative Majorization Least Square 
-		algorithm (an SVD/PCR-based imputation method with 4 principal components, p=4). Then, a kNN algorithm 
+		algorithm (an SVD-based imputation method with 4 principal components, p=4). Then, a kNN algorithm 
 		is used to select k-nearest-neighbours to an instance that had a missing value for a particular variable, 
-		and replaces the previously (globally) imputed value with a new one found with anoter IMLS run only among the
+		and the previously (globally) imputed value is rapleced with a new one found with another IMLS run only among the
 		nearest-neighbours (and with p=1). \\
 
 	The theoretical properties of this approach are not discussed but the authors do show the superiority
-		of INImpute to regular kNN and other ILS approaches in a variety of scenarios.
+		of INImpute to regular kNN and other ILS approaches in a variety of simulation scenarios.
 	}
 }
 
