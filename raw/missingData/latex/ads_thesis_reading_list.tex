@@ -1,0 +1,92 @@
+%%% Title:    ADS Thesis Reading List: Missing Data
+%%% Author:   Kyle M. Lang
+%%% Created:  2019-09-16
+%%% Modified: 2022-04-26
+
+\documentclass[12pt]{article}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage[natbibapa]{apacite}
+\usepackage{multibib}
+\usepackage[libertine]{newtxmath}
+\usepackage{hyperref}
+\usepackage{datetime2}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\geometry{verbose, tmargin = 2.5cm, bmargin = 2.5cm, lmargin = 2.5cm, rmargin = 2.5cm}
+
+\newcites{b,intro,algo,model,pred}{%
+  Books,%
+  Introductions/Reviews,%
+  The FCS/MICE Algorithm,%
+  Model-Specification Issues,%
+  Prediction-Focused%
+}
+
+%% Define the path to bibtex files
+%% Set to current directory when compiling via 'compileLatex.sh'
+\newcommand{\bibPath}{./}
+
+%% Set the title and author info
+\title{Applied Data Science Thesis\\ \Large Missing Data Reading List}
+\author{Compiled by Kyle M. Lang}
+
+\raggedright
+
+\begin{document}
+
+\maketitle
+
+The sources listed below offer an overall introduction to missing data analysis
+via multiple imputation (MI) with additional focus on prediction problems.
+
+\nociteb{vanBuuren:2018}
+
+\nociteintro{
+  schaferGraham:2002,
+  graham:2009,
+  littleEtAl:2013,
+  langLittle:2018,
+  baraldiEnders:2010,
+  enders:2013,
+  rubin:1996%
+}
+
+\nocitealgo{
+  raghunathanEtAl:2001,
+  vanBuurenEtAl:2006%
+}
+
+\nocitemodel{
+  collinsEtAl:2001,
+  whiteEtAl:2011%
+}
+
+\nocitepred{
+  garcia-laencinaEtAl:2010,
+  saar-tsechanskyProvost:2007%
+}
+
+\bibliographystyleb{apacite}
+\bibliographyb{\bibPath/books.bib}
+
+\bibliographystyleintro{apacite}
+\bibliographyintro{\bibPath/papers.bib}
+
+\bibliographystylealgo{apacite}
+\bibliographyalgo{\bibPath/papers.bib}
+
+\bibliographystylemodel{apacite}
+\bibliographymodel{\bibPath/papers.bib}
+
+\bibliographystylepred{apacite}
+\bibliographypred{\bibPath/papers.bib}
+
+\end{document}

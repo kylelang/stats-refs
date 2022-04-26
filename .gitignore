@@ -357,3 +357,4 @@ venv.bak/
 
 ## Emacs auto-save files:
 *~
+.#*
